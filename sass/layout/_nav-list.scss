@@ -1,0 +1,30 @@
+.nav-list {
+   @include desktop {
+      display: flex;
+      gap: 27px;
+   }
+
+   &__item {
+      font-family: "Montserrat";
+      font-style: normal;
+      @include font(700, 16px, 1.25, null);
+
+      display: flex;
+      align-items: center;
+   }
+
+   &__link {
+      color: var(--primary-text-color);
+      border: none;
+      outline: none;
+      &:hover {
+         color: var(--btn-color);
+         text-decoration: underline;
+      }
+
+      &:focus {
+         color: var(--btn-hover-color);
+         text-decoration: underline;
+      }
+   }
+}

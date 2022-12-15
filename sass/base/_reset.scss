@@ -10,21 +10,20 @@ ul {
    padding: 0;
 }
 
-button{
+button {
    border: none;
    background-color: transparent;
 }
 
-img{
+img {
    display: block;
 }
 
-.link {
+a {
    text-decoration: none;
+   cursor: pointer;
 }
 
-.list {
+ul {
    list-style: none;
 }
-
-
