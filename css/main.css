@@ -1,4 +1,4 @@
-/*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@700&family=Seymour+One&display=swap"); /*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
 ========
@@ -273,20 +273,50 @@ img {
 }
 
 :root {
-  --primary-text-color: ;
-  --secondary-text-color: ;
-  --primary-background-color: ;
-  --secondary-background-color: ;
-  --accent-text-color: ;
-  --logo-text-color: ;
+  --primary-text-color: #fcfcfc;
+  --secondary-text-color: #131313;
+  --primary-background-color: #84A178;
+  --secondary-background-color: #ffffff;
+  --bc-list-1: #AEC6A5;
+  --bc-list-2: #EFD478;
+  --bc-list-3: #D6936D;
+  --accent-text-color: #F8D24E;
   --white-color: #ffffff;
-  --border-color: ;
-  --icon-color: ;
+  --border-color: #e1e1e1;
+  --roboto: "Roboto", sans-serif;
+  --inter: "Inter", sans-serif;
+  --seymoure:"Seymour One", sans-serif;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .hidden {
