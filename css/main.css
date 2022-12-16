@@ -298,13 +298,12 @@ ul {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: tomato;
   color: var(--primary-text-color);
 }
 
 @media screen and (max-width: 767px) {
   .container {
-    width: 320px;
+    width: 480px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -324,6 +323,12 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 .button {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -369,6 +374,52 @@ body {
   background-color: var(--btn-disabled-color);
 }
 
+.transparent-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border: 2px solid var(--btn-color);
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 1.25;
+  color: var(--secondary-text-color);
+  background: transparent;
+}
+.transparent-btn:hover {
+  border: 2px solid var(--btn-hover-color);
+}
+.transparent-btn:focus {
+  border: 2px solid var(--btn-hover-color);
+  color: var(--primary-text-color);
+}
+.transparent-btn:disabled {
+  border: 2px solid var(--btn-disabled-color);
+}
+
+.link {
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 1.25;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: var(--btn-color);
+}
+.link:hover {
+  color: var(--btn-hover-color);
+}
+.link:focus {
+  color: var(--primary-text-color);
+}
+.link:disabled {
+  color: var(--btn-disabled-color);
+}
+
 .hidden {
   position: absolute;
   width: 1px;
@@ -381,6 +432,7 @@ body {
 }
 
 .header {
+  background-color: var(--primary-background-color);
   padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -405,8 +457,8 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .header__site-logo {
-    margin-right: auto;
+  .header__burger-btn {
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -463,4 +515,74 @@ body {
 .nav-list__link:focus {
   color: var(--btn-hover-color);
   text-decoration: underline;
+}
+
+.hero {
+  background-color: var(--primary-background-color);
+  background-image: url("../images/hero-img1-mob.png"), url("../images/hero-img2-mob.png");
+  background-repeat: no-repeat;
+  background-position: 50px 75px, center bottom;
+  background-size: cover, contain;
+  padding-top: 61px;
+  padding-bottom: 239px;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 45px;
+    padding-bottom: 111px;
+  }
+}
+.hero__title {
+  font-family: var(--seymoure);
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+@media screen and (max-width: 767px) {
+  .hero__title {
+    max-width: 247px;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.27;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    max-width: 181px;
+    font-size: 18px;
+    line-height: 1.28;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 367px;
+    font-size: 38px;
+    line-height: 1.26;
+  }
+}
+.hero span {
+  font-size: 34px;
+  line-height: 96.5%;
+}
+@media screen and (min-width: 768px) {
+  .hero span {
+    font-size: 24px;
+    line-height: 0.54;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero span {
+    font-size: 38px;
+    line-height: 1.26;
+  }
+}
+.hero__btn {
+  margin-right: 8px;
 }/*# sourceMappingURL=main.css.map */

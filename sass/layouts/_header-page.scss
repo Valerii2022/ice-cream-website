@@ -1,4 +1,9 @@
 .header {
+   // position: absolute;
+   // top: 0;
+   // left: 0;
+   // width: 100%;
+   background-color: var(--primary-background-color);
    padding-top: 20px;
    @include flex(flex, space-between, baseline);
 
@@ -11,12 +16,14 @@
    }
 
    &__site-logo {
-      @media screen and (min-width: 768px) and (max-width: 1199px) {
-         margin-right: auto;
-      }
+      
    }
 
    &__burger-btn {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: auto;
+      }
+
       @include desktop {
          display: none;
       }

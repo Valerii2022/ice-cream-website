@@ -1,0 +1,63 @@
+.hero{
+    background-color: var(--primary-background-color);
+    background-image: url('../images/hero-img1-mob.png'), url('../images/hero-img2-mob.png');
+    background-repeat: no-repeat;
+    background-position: 50px 75px, center bottom;
+    background-size: cover, contain;
+    padding-top: 61px;
+    padding-bottom: 239px;
+
+    @include tablet{
+        padding-top: 40px;
+        padding-bottom: 32px;
+    }
+
+    @include desktop{
+        padding-top: 45px;
+        padding-bottom: 111px;
+    }
+    &__title{
+        font-family: var(--seymoure);
+        text-transform: uppercase;
+        color: var(--primary-text-color);
+
+        @media screen and (max-width: 767px){
+            max-width: 247px;
+            margin-bottom: 32px;
+
+            @include font(400, 26px, 1.27, 0.04em);
+        }
+
+        @include tablet{
+            max-width: 181px;
+            font-size: 18px;
+            line-height: 1.28;
+        }
+
+        @include desktop {
+           max-width: 367px;
+           font-size: 38px;
+           line-height: 1.26;
+        }
+    }
+
+    & span {
+        font-size: 34px;
+        line-height: 96.5%;
+
+        @include tablet {
+            font-size: 24px;
+            line-height: 0.54;
+        }
+        
+        @include desktop {
+            font-size: 38px;
+            line-height: 1.26;
+        }
+     }
+
+&__btn{
+    margin-right: 8px;
+}
+
+}
