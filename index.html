@@ -14,7 +14,7 @@
         <source srcset="./images/logo.png 1x, ./images/logo@2x.png 2x" media="(min-width: 1200px)" />
         <source srcset="./images/logo-tab.png 1x, ./images/logo-tab@2x.png 2x" media="(min-width: 768px)" />
         <source srcset="./images/logo-mob.png 1x, ./images/logo-mob@2x.png 2x" media="(max-width: 767px)" />
-        <img class="header__site-logo" src="./images/logo.png" alt="logo" width="40">
+        <img class="header__site-logo" src="./images/logo.png" alt="logo">
       </picture>
       <button class="header__burger-btn" type="button">
         <svg class="header__burger" width="40" height="37">
@@ -36,9 +36,23 @@
     <main>
       <!-- section -->
       <section class="container hero">
-        <h1 class="hero__title">ice cream made with <span>passion</span></h1>
-        <button class="hero__btn transparent-btn" type="button">Products</button>
-        <a class="hero__link link" href="#">How it’s made?</a>
+        <div class="hero__top">
+          <div class="hero__title-wrap">
+            <h1 class="hero__title">ice cream made with <span>passion</span></h1>
+            <button class="hero__btn transparent-btn" type="button">Products</button>
+            <a class="hero__link link" href="#">How it’s made?</a>
+          </div>
+          <div class="hero__benefits-wrap">
+            <p class="hero__benefits"><span>16</span>cafes</p>
+            <p class="hero__benefits"><span>23</span>food trucks</p>
+          </div>
+        </div>
+        <div class="hero__bottom">
+          <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+          <svg class="hero__arrow" width="40" height="14">
+            <use href="./images/icons.svg#icon-arrow"></use>
+          </svg>
+        </div>
       </section>
     </main>
 

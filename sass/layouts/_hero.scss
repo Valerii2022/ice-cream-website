@@ -1,63 +1,151 @@
 .hero{
     background-color: var(--primary-background-color);
-    background-image: url('../images/hero-img1-mob.png'), url('../images/hero-img2-mob.png');
     background-repeat: no-repeat;
-    background-position: 50px 75px, center bottom;
-    background-size: cover, contain;
-    padding-top: 61px;
-    padding-bottom: 239px;
+    background-size: cover;
+    background-position: center bottom;
+
+    @media screen and (max-width:767px){
+        padding-top: 110px;
+        padding-bottom: 239px;
+        background-image: url('../images/hero-bg-mob.jpg');
+        @include retina{
+            background-image: url('../images/hero-bg-mob@2x.jpg');
+        }
+    }
 
     @include tablet{
-        padding-top: 40px;
-        padding-bottom: 32px;
+        padding-top: 103px;
+        padding-bottom: 26px;
+        background-image: url('../images/hero-bg-tab.jpg');
+        @include retina {
+            background-image: url('../images/hero-bg-tab@2x.jpg');
+        }
     }
 
     @include desktop{
-        padding-top: 45px;
+        padding-top: 118px;
         padding-bottom: 111px;
+        background-image: url('../images/hero-bg.jpg');
+
+        @include retina {
+            background-image: url('../images/hero-bg@2x.jpg');
+        }
     }
+
+    &__top{
+        @include tablet{
+           margin-bottom: 56px;
+           display: flex;
+           justify-content: space-between;
+        }
+        
+
+        @include desktop{
+            margin-bottom: 109px;
+        }
+    }
+
+    &__benefits-wrap{
+        @media screen and (max-width: 767px){
+            display: none;
+        }
+    }
+
+    &__benefits{
+        display: flex;
+        flex-direction: column;
+
+        font-size: 8px;
+        line-height: 1.25;
+        text-align: right;
+        
+        color: var(--primary-text-color);
+    }
+
+    &__benefits:first-child{
+        margin-bottom: 20px;
+    }
+
+    &__benefits span{
+        margin-bottom: 4px;
+
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 1.21;
+        text-align: right;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        
+        color: var(--secondary-text-color)
+    }
+
     &__title{
         font-family: var(--seymoure);
         text-transform: uppercase;
         color: var(--primary-text-color);
+        font-weight: 400;
 
         @media screen and (max-width: 767px){
             max-width: 247px;
             margin-bottom: 32px;
 
-            @include font(400, 26px, 1.27, 0.04em);
+            font-size: 26px;
+            line-height: 1.27;
+            letter-spacing: 0.04em;
         }
 
         @include tablet{
+            margin-bottom: 20px;
             max-width: 181px;
             font-size: 18px;
             line-height: 1.28;
         }
 
         @include desktop {
+           margin-bottom: 28px;
            max-width: 367px;
            font-size: 38px;
            line-height: 1.26;
         }
+
+        & span {
+            font-weight: 400;
+            font-size: 34px;
+            line-height: 0.97;
+
+            @include tablet {
+                font-size: 24px;
+                line-height: 0.54;
+            }
+
+            @include desktop {
+                font-size: 38px;
+                line-height: 1.26;
+            }
+        }
     }
-
-    & span {
-        font-size: 34px;
-        line-height: 96.5%;
-
-        @include tablet {
-            font-size: 24px;
-            line-height: 0.54;
-        }
-        
-        @include desktop {
-            font-size: 38px;
-            line-height: 1.26;
-        }
-     }
 
 &__btn{
     margin-right: 8px;
 }
 
+&__bottom{
+    @media screen and (max-width: 767px) {
+       display: none;
+    }
+    padding-left: 185px;
+}
+
+&__text{
+    width: 151px;
+    margin-bottom: 13px;
+    font-size: 12px;
+    line-height: 1.42;
+    
+    color: var(--primary-text-color);
+}
+
+&__arrow{
+    fill: currentColor;
+}
 }

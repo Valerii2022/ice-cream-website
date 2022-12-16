@@ -1,22 +1,42 @@
 .header {
-   // position: absolute;
-   // top: 0;
-   // left: 0;
-   // width: 100%;
-   background-color: var(--primary-background-color);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
    padding-top: 20px;
-   @include flex(flex, space-between, baseline);
+   @extend %margin-auto;
+
+   @include flex(flex, space-between, center);
 
    @media screen and (max-width: 767px) {
       padding-top: 12px;
+      width: 480px;
    }
 
    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding-top: 20px;
       align-items: center;
+      width: 768px;
    }
 
-   &__site-logo {
-      
+   @include desktop{
+      padding-top: 8px;
+      width: 1200px;
+   }
+
+   &__site-logo{
+      width: 40px;
+      height: 37px;
+
+      @include tablet{
+         width: 48px;
+         height: 44px;
+      }
+
+      @include desktop{
+         width: 60px;
+         height: 65px;
+      }
    }
 
    &__burger-btn {

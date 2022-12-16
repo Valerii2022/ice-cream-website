@@ -291,7 +291,7 @@ ul {
   --seymoure: "Seymour One", sans-serif;
 }
 
-.container {
+.header, .container {
   margin-left: auto;
   margin-right: auto;
 }
@@ -318,8 +318,8 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -432,7 +432,10 @@ body {
 }
 
 .header {
-  background-color: var(--primary-background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,20 +443,45 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 767px) {
   .header {
     padding-top: 12px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header {
+    padding-top: 20px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 8px;
+    width: 1200px;
+  }
+}
+.header__site-logo {
+  width: 40px;
+  height: 37px;
+}
+@media screen and (min-width: 768px) {
+  .header__site-logo {
+    width: 48px;
+    height: 44px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__site-logo {
+    width: 60px;
+    height: 65px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -519,35 +547,103 @@ body {
 
 .hero {
   background-color: var(--primary-background-color);
-  background-image: url("../images/hero-img1-mob.png"), url("../images/hero-img2-mob.png");
   background-repeat: no-repeat;
-  background-position: 50px 75px, center bottom;
-  background-size: cover, contain;
-  padding-top: 61px;
-  padding-bottom: 239px;
+  background-size: cover;
+  background-position: center bottom;
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 239px;
+    background-image: url("../images/hero-bg-mob.jpg");
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero-bg-mob@2x.jpg");
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    padding-top: 40px;
-    padding-bottom: 32px;
+    padding-top: 103px;
+    padding-bottom: 26px;
+    background-image: url("../images/hero-bg-tab.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero-bg-tab@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    padding-top: 45px;
+    padding-top: 118px;
     padding-bottom: 111px;
+    background-image: url("../images/hero-bg.jpg");
   }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/hero-bg@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__top {
+    margin-bottom: 56px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__top {
+    margin-bottom: 109px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero__benefits-wrap {
+    display: none;
+  }
+}
+.hero__benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: right;
+  color: var(--primary-text-color);
+}
+.hero__benefits:first-child {
+  margin-bottom: 20px;
+}
+.hero__benefits span {
+  margin-bottom: 4px;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.21;
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
 }
 .hero__title {
   font-family: var(--seymoure);
   text-transform: uppercase;
   color: var(--primary-text-color);
+  font-weight: 400;
 }
 @media screen and (max-width: 767px) {
   .hero__title {
     max-width: 247px;
     margin-bottom: 32px;
-    font-weight: 400;
     font-size: 26px;
     line-height: 1.27;
     letter-spacing: 0.04em;
@@ -555,6 +651,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
+    margin-bottom: 20px;
     max-width: 181px;
     font-size: 18px;
     line-height: 1.28;
@@ -562,27 +659,47 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
+    margin-bottom: 28px;
     max-width: 367px;
     font-size: 38px;
     line-height: 1.26;
   }
 }
-.hero span {
+.hero__title span {
+  font-weight: 400;
   font-size: 34px;
-  line-height: 96.5%;
+  line-height: 0.97;
 }
 @media screen and (min-width: 768px) {
-  .hero span {
+  .hero__title span {
     font-size: 24px;
     line-height: 0.54;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero span {
+  .hero__title span {
     font-size: 38px;
     line-height: 1.26;
   }
 }
 .hero__btn {
   margin-right: 8px;
+}
+.hero__bottom {
+  padding-left: 185px;
+}
+@media screen and (max-width: 767px) {
+  .hero__bottom {
+    display: none;
+  }
+}
+.hero__text {
+  width: 151px;
+  margin-bottom: 13px;
+  font-size: 12px;
+  line-height: 1.42;
+  color: var(--primary-text-color);
+}
+.hero__arrow {
+  fill: currentColor;
 }/*# sourceMappingURL=main.css.map */
