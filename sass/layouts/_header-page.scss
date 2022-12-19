@@ -67,6 +67,12 @@
       background-color: var(--primary-background-color);
    }
 
+   &__mobile-menu-logo {
+      position: absolute;
+      top: 12px;
+      left: 31px;
+   }
+
    &__navigate {
       @media screen and (max-width: 767px) {
          margin-bottom: 111px;

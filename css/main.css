@@ -572,6 +572,11 @@ body.no-scroll {
   height: 100%;
   background-color: var(--primary-background-color);
 }
+.header__mobile-menu-logo {
+  position: absolute;
+  top: 12px;
+  left: 31px;
+}
 @media screen and (max-width: 767px) {
   .header__navigate {
     margin-bottom: 111px;
