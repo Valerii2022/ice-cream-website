@@ -15,9 +15,43 @@
    color: var(--secondary-text-color);
    background: var(--btn-color);
 
+   &:hover {
+      background-color: var(--btn-hover-color);
+   }
+
+   &:focus {
+      background-color: var(--btn-hover-color);
+      color: var(--primary-text-color);
+   }
+
+   &:focus::after {
+      border-color: var(--primary-text-color);
+   }
+
+   &:disabled {
+      background-color: var(--btn-disabled-color);
+   }
+}
+
+.btn-arrow {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   padding-left: 34px;
+   padding-right: 34px;
+   border-radius: 10px;
+   cursor: pointer;
+   outline: none;
+
+   @include font(600, 14px, 1.21, null);
+   display: flex;
+   align-items: center;
+   text-align: center;
+
+   color: var(--secondary-text-color);
+   background: var(--btn-color);
+
    @include desktop {
-      
-      }
+   }
 
    &::after {
       content: "";
@@ -73,7 +107,7 @@
 
       font-size: 14px;
       line-height: 1.29;
-      }
+   }
 
    &:hover {
       border: 2px solid var(--btn-hover-color);
@@ -89,7 +123,7 @@
    }
 }
 
-.link{
+.link {
    cursor: pointer;
    outline: none;
 
@@ -103,16 +137,16 @@
    @include desktop {
       font-size: 14px;
       line-height: 1.29;
-      }
+   }
 
    &:hover {
       color: var(--btn-hover-color);
-      }
-   
+   }
+
    &:focus {
       color: var(--primary-text-color);
    }
-   
+
    &:disabled {
       color: var(--btn-disabled-color);
    }

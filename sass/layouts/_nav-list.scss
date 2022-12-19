@@ -10,13 +10,27 @@
       @include font(700, 16px, 1.25, null);
 
       display: flex;
-      align-items: center;
+      justify-content: center;
+   }
+
+   &__item:not(:last-child) {
+      @media screen and (max-width: 767px) {
+         margin-bottom: 32px;
+      }
    }
 
    &__link {
+      @media screen and (max-width: 767px) {
+         font-weight: 700;
+         font-size: 32px;
+         line-height: 1.22;
+         text-align: center;
+      }
+
       color: var(--primary-text-color);
       border: none;
       outline: none;
+
       &:hover {
          color: var(--btn-color);
          text-decoration: underline;
@@ -26,5 +40,11 @@
          color: var(--btn-hover-color);
          text-decoration: underline;
       }
+   }
+}
+
+.accent-link {
+   @media screen and (max-width: 767px) {
+      color: var(--secondary-text-color);
    }
 }

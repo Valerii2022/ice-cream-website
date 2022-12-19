@@ -1,8 +1,8 @@
 body {
    font-family: "Montserrat", sans-serif;
    color: var(--primary-text-color);
-}
 
-// &.no-scroll {
-//    overflow: hidden;
-// }
+   &.no-scroll {
+      overflow: hidden;
+   }
+}

@@ -11,25 +11,45 @@
     <!-- header -->
     <header class="header container">
       <picture>
-        <source srcset="./images/logo.png 1x, ./images/logo@2x.png 2x" media="(min-width: 1200px)" />
-        <source srcset="./images/logo-tab.png 1x, ./images/logo-tab@2x.png 2x" media="(min-width: 768px)" />
-        <source srcset="./images/logo-mob.png 1x, ./images/logo-mob@2x.png 2x" media="(max-width: 767px)" />
-        <img class="header__site-logo" src="./images/logo.png" alt="logo">
+        <source
+          srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="./images/logo-tab.png 1x, ./images/logo-tab@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/logo-mob.png 1x, ./images/logo-mob@2x.png 2x"
+          media="(max-width: 767px)"
+        />
+        <img class="header__site-logo" src="./images/logo.png" alt="logo" />
       </picture>
-      <button class="header__burger-btn" type="button">
-        <svg class="header__burger" width="40" height="37">
+      <button class="header__burger-open" type="button" data-mobile-open>
+        <svg class="icon" width="40" height="37">
           <use href="./images/icons.svg#icon-burger"></use>
         </svg>
       </button>
-      <nav class="header__navigate">
-        <ul class="nav-list">
-          <li class="nav-list__item"><a class="nav-list__link" href="#">Home</a></li>
-          <li class="nav-list__item"><a class="nav-list__link" href="#">How it’s made?</a></li>
-          <li class="nav-list__item"><a class="nav-list__link" href="#">Our products</a></li>
-          <li class="nav-list__item"><a class="nav-list__link" href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="header__buy-now-btn button" type="button">Buy now</button>
+      <div class="header__mobile-menu" data-mobile>
+        <button class="header__burger-close" type="button" data-mobile-close>
+          <svg class="icon" width="19" height="19">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="header__navigate">
+          <ul class="nav-list">
+            <li class="nav-list__item"><a class="nav-list__link" href="#">Home</a></li>
+            <li class="nav-list__item">
+              <a class="nav-list__link accent-link" href="#">How it’s made?</a>
+            </li>
+            <li class="nav-list__item"><a class="nav-list__link" href="#">Our products</a></li>
+            <li class="nav-list__item"><a class="nav-list__link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="header__buy-now-btn btn-arrow" type="button" data-buy-now-open>
+          Buy now
+        </button>
+      </div>
     </header>
 
     <!-- main -->
@@ -48,7 +68,10 @@
           </div>
         </div>
         <div class="hero__bottom">
-          <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et
+          </p>
           <svg class="hero__arrow" width="40" height="14">
             <use href="./images/icons.svg#icon-arrow"></use>
           </svg>
@@ -59,8 +82,115 @@
     <!-- footer -->
     <footer class="footer"></footer>
 
+    <!-- buy now modal -->
+    <div class="buy-now" data-buy-now>
+      <div class="buy-now__modal">
+        <button class="buy-now__close-btn" type="button" data-buy-now-close>
+          <svg class="icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="buy-now__title">Buy now</h2>
+        <form action="#" class="buy-now__form">
+          <ul class="buy-now__list">
+            <li class="buy-now__item">
+              <label for=""><input class="buy-now__checkbox" type="checkbox" hidden /></label>
+              <div class="buy-now__img-thumb">
+                <picture>
+                  <source
+                    srcset="./images/ice-cream.png 1x, ./images/ice-cream@2x.png 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/ice-cream-tab.png 1x, ./images/ice-cream-tab@2x.png 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/ice-cream-mob.png 1x, ./images/ice-cream-mob@2x.png 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img class="buy-now__img" src="./images/ice-cream.png" alt="logo" />
+                </picture>
+              </div>
+              <h3 class="buy-now__subtitle">ice cream</h3>
+            </li>
+            <li class="buy-now__item">
+              <label for=""><input class="buy-now__checkbox" type="checkbox" hidden /></label>
+              <div class="buy-now__img-thumb">
+                <picture>
+                  <source
+                    srcset="./images/ice-coffee.png 1x, ./images/ice-coffee@2x.png 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/ice-coffee-tab.png 1x, ./images/ice-coffee-tab@2x.png 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/ice-coffee-mob.png 1x, ./images/ice-coffee-mob@2x.png 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img class="buy-now__img" src="./images/ice-coffee.png" alt="logo" />
+                </picture>
+              </div>
+              <h3 class="buy-now__subtitle">ice coffee</h3>
+            </li>
+            <li class="buy-now__item">
+              <label for=""><input class="buy-now__checkbox" type="checkbox" hidden /></label>
+              <div class="buy-now__img-thumb">
+                <picture>
+                  <source
+                    srcset="./images/milkshake.png 1x, ./images/milkshake@2x.png 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/milkshake-tab.png 1x, ./images/milkshake-tab@2x.png 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/milkshake-mob.png 1x, ./images/milkshake-mob@2x.png 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <img class="buy-now__img" src="./images/milkshake.png" alt="logo" />
+                </picture>
+              </div>
+              <h3 class="buy-now__subtitle">milkshake</h3>
+            </li>
+          </ul>
+          <label>
+            <input
+              class="buy-now__input"
+              type="text"
+              name="user-name"
+              placeholder="Name"
+              minlength="3"
+              required
+            />
+          </label>
+          <label>
+            <input
+              class="buy-now__input"
+              type="tel"
+              name="user-phone"
+              placeholder="Phone"
+              pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              title="+38 (096) 111-11-11"
+              required
+            />
+          </label>
+          <label for="textarea"></label>
+          <textarea
+            class="buy-now__textarea"
+            name="feedback"
+            placeholder="Comment"
+            id="textarea"
+          ></textarea>
+          <button class="buy-now__form-btn button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
     <!-- script -->
-    <!-- <script src="./js/menu.js"></script>
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
