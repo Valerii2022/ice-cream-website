@@ -41,7 +41,7 @@
         
 
         @include desktop{
-            margin-bottom: 109px;
+            margin-bottom: 111px;
         }
     }
 
@@ -60,10 +60,19 @@
         text-align: right;
         
         color: var(--primary-text-color);
+
+        @include desktop {
+            font-size: 14px;
+            line-height: 1.21;
+            }
     }
 
     &__benefits:first-child{
         margin-bottom: 20px;
+
+        @include desktop {
+            margin-bottom: 16px;
+            }
     }
 
     &__benefits span{
@@ -76,7 +85,12 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         
-        color: var(--secondary-text-color)
+        color: var(--secondary-text-color);
+
+        @include desktop {
+            font-size: 46px;
+            line-height: 1.22;
+            }
     }
 
     &__title{
@@ -127,13 +141,21 @@
 
 &__btn{
     margin-right: 8px;
+
+    @include desktop {
+       margin-right: 34px;
+        }
 }
 
 &__bottom{
     @media screen and (max-width: 767px) {
        display: none;
     }
-    padding-left: 185px;
+    padding-left: 180px;
+
+    @include desktop {
+        padding-left: 240px;
+    }
 }
 
 &__text{
@@ -143,6 +165,12 @@
     line-height: 1.42;
     
     color: var(--primary-text-color);
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.43;
+    }
+    
 }
 
 &__arrow{

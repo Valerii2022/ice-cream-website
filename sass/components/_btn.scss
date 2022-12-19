@@ -15,6 +15,10 @@
    color: var(--secondary-text-color);
    background: var(--btn-color);
 
+   @include desktop {
+      
+      }
+
    &::after {
       content: "";
       width: 8px;
@@ -61,6 +65,16 @@
    color: var(--secondary-text-color);
    background: transparent;
 
+   @include desktop {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 32px;
+      padding-right: 32px;
+
+      font-size: 14px;
+      line-height: 1.29;
+      }
+
    &:hover {
       border: 2px solid var(--btn-hover-color);
    }
@@ -85,6 +99,11 @@
    text-decoration-line: underline;
 
    color: var(--btn-color);
+
+   @include desktop {
+      font-size: 14px;
+      line-height: 1.29;
+      }
 
    &:hover {
       color: var(--btn-hover-color);

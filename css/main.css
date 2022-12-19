@@ -389,6 +389,16 @@ body {
   color: var(--secondary-text-color);
   background: transparent;
 }
+@media screen and (min-width: 1200px) {
+  .transparent-btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
 .transparent-btn:hover {
   border: 2px solid var(--btn-hover-color);
 }
@@ -409,6 +419,12 @@ body {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--btn-color);
+}
+@media screen and (min-width: 1200px) {
+  .link {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 .link:hover {
   color: var(--btn-hover-color);
@@ -600,7 +616,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero__top {
-    margin-bottom: 109px;
+    margin-bottom: 111px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -621,8 +637,19 @@ body {
   text-align: right;
   color: var(--primary-text-color);
 }
+@media screen and (min-width: 1200px) {
+  .hero__benefits {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
 .hero__benefits:first-child {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__benefits:first-child {
+    margin-bottom: 16px;
+  }
 }
 .hero__benefits span {
   margin-bottom: 4px;
@@ -633,6 +660,12 @@ body {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .hero__benefits span {
+    font-size: 46px;
+    line-height: 1.22;
+  }
 }
 .hero__title {
   font-family: var(--seymoure);
@@ -685,12 +718,22 @@ body {
 .hero__btn {
   margin-right: 8px;
 }
+@media screen and (min-width: 1200px) {
+  .hero__btn {
+    margin-right: 34px;
+  }
+}
 .hero__bottom {
-  padding-left: 185px;
+  padding-left: 180px;
 }
 @media screen and (max-width: 767px) {
   .hero__bottom {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__bottom {
+    padding-left: 240px;
   }
 }
 .hero__text {
@@ -699,6 +742,12 @@ body {
   font-size: 12px;
   line-height: 1.42;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .hero__text {
+    font-size: 14px;
+    line-height: 1.43;
+  }
 }
 .hero__arrow {
   fill: currentColor;
