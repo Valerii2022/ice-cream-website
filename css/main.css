@@ -303,7 +303,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .container {
-    width: 480px;
+    max-width: 480px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -564,7 +564,7 @@ body {
 .hero {
   background-color: var(--primary-background-color);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center bottom;
 }
 @media screen and (max-width: 767px) {
@@ -594,7 +594,7 @@ body {
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 118px;
-    padding-bottom: 111px;
+    padding-bottom: 108px;
     background-image: url("../images/hero-bg.jpg");
   }
 }
@@ -616,7 +616,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero__top {
-    margin-bottom: 111px;
+    margin-bottom: 109px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -737,7 +737,7 @@ body {
   }
 }
 .hero__text {
-  width: 151px;
+  max-width: 151px;
   margin-bottom: 13px;
   font-size: 12px;
   line-height: 1.42;
@@ -745,6 +745,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero__text {
+    max-width: 200px;
     font-size: 14px;
     line-height: 1.43;
   }
