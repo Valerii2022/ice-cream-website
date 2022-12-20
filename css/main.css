@@ -1162,4 +1162,53 @@ body.no-scroll {
 .buy-now__form-btn {
   margin-left: auto;
   margin-right: auto;
+}
+
+.about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url(../../images/bg1-mob.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .about {
+    background-image: url(../../images/bg1-mob@2x.jpg);
+  }
+}
+.about__uptitle {
+  margin-bottom: 12px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+.about__title {
+  margin-bottom: 148px;
+  font-family: var(--seymoure);
+  font-size: 30px;
+  line-height: 1.27;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+.about__item {
+  border-radius: 24px;
+  padding-top: 106px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 13px;
+}
+.about__item:first-child {
+  background: #AEC6A5;
+}
+.about__item:nth-child(2) {
+  background: #EFD478;
+}
+.about__item:last-child {
+  background: #D6936D;
 }/*# sourceMappingURL=main.css.map */

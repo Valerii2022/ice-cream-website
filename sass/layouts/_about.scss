@@ -1,0 +1,67 @@
+.container {}
+
+.about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(../../images/bg1-mob.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    @include retina{
+        background-image: url(../../images/bg1-mob@2x.jpg);
+    }
+
+    &__uptitle {
+        margin-bottom: 12px;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.22;
+        text-align: center;
+        text-transform: uppercase;
+    
+        color: var(--secondary-text-color);
+    }
+    
+    &__title {
+        margin-bottom: 148px;
+        font-family: var(--seymoure);
+        font-size: 30px;
+        line-height: 1.27;
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    
+        color: var(--secondary-text-color);
+    }
+    
+    &-list {}
+    
+    &__item {
+        
+        border-radius: 24px;
+        padding-top: 106px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 13px;
+    }
+
+    &__item:first-child{
+        background: #AEC6A5;
+    }
+
+    &__item:nth-child(2) {
+        background: #EFD478;
+    }
+
+    &__item:last-child {
+        background: #D6936D;
+    }
+    
+    &__subtitle {}
+    
+    &__descr {}
+    
+    &__btn {}
+    
+    &__arrow-icon {}
+}
