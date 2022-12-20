@@ -6,7 +6,7 @@
    padding-top: 20px;
    @extend %margin-auto;
 
-   @include flex(flex, space-between, center);
+   @include flex(flex, space-between, baseline);
 
    @media screen and (max-width: 767px) {
       padding-top: 12px;
@@ -56,21 +56,49 @@
    }
 
    &__mobile-menu {
-      padding-top: 100px;
-      padding-right: 22px;
-      padding-left: 22px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: var(--primary-background-color);
+      z-index: 1000;
+      @media screen and (max-width: 1199px){
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: var(--primary-background-color);
+      }
+
+      @media screen and (max-width: 767px){
+         padding-top: 100px;
+         padding-right: 22px;
+         padding-left: 22px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px){
+         padding-top: 140px;
+         padding-left: 180px;
+         padding-right: 180px;
+      }
+
    }
 
    &__mobile-menu-logo {
       position: absolute;
-      top: 12px;
-      left: 31px;
+
+      @media screen and (max-width:767px){
+         top: 12px;
+         left: 31px;
+      }
+
+      @include tablet{
+         width: 48px;
+         height: 44px;
+         top: 20px;
+         left: 32px;
+      }
+
+      @include desktop{
+         display: none;
+      }
+      
    }
 
    &__navigate {
@@ -87,6 +115,15 @@
       right: 26px;
       color: var(--white-color);
       outline: none;
+
+      @include tablet{
+         top: 38px;
+         right: 38px;
+      }
+
+      @include desktop{
+         display: none;
+      }
    }
 
    &__burger-close .icon {
@@ -96,13 +133,23 @@
    &__navigate {
    }
 
-   &__buy-now-btn {
+   &__buy-now-btn-mobile{
       @media screen and (max-width: 767px) {
          margin-left: auto;
          margin-right: auto;
       }
-
+   
       @media screen and (min-width: 768px) and (max-width: 1199px) {
+         display: none;
+      }
+   }
+
+   &__buy-now-btn {
+      @media screen and (max-width: 767px){
+         display: none;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px){
          margin-left: 32px;
       }
    }

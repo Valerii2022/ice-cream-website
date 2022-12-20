@@ -17,9 +17,17 @@
       @media screen and (max-width: 767px) {
          margin-bottom: 32px;
       }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px){
+         margin-bottom: 40px;
+      }
    }
 
    &__link {
+      color: var(--primary-text-color);
+      border: none;
+      outline: none;
+
       @media screen and (max-width: 767px) {
          font-weight: 700;
          font-size: 32px;
@@ -27,9 +35,10 @@
          text-align: center;
       }
 
-      color: var(--primary-text-color);
-      border: none;
-      outline: none;
+      @media screen and (min-width: 768px) and (max-width: 1199px){
+         font-size: 48px;
+         line-height: 1.23;
+      }
 
       &:hover {
          color: var(--btn-color);
@@ -44,7 +53,7 @@
 }
 
 .accent-link {
-   @media screen and (max-width: 767px) {
+   @media screen and (max-width: 1199px) {
       color: var(--secondary-text-color);
    }
 }

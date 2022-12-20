@@ -26,11 +26,11 @@
         <img class="header__site-logo" src="./images/logo.png" alt="logo" />
       </picture>
       <button class="header__burger-open" type="button" data-mobile-open>
-        <svg class="icon" width="40" height="37">
+        <svg class="icon" width="32" height="32">
           <use href="./images/icons.svg#icon-burger"></use>
         </svg>
       </button>
-      <div class="header__mobile-menu" data-mobile>
+      <div class="header__mobile-menu is-hidden" data-mobile>
         <picture>
           <source
             srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
@@ -67,10 +67,13 @@
             <li class="nav-list__item"><a class="nav-list__link" href="#">Contact</a></li>
           </ul>
         </nav>
-        <button class="header__buy-now-btn btn-arrow" type="button" data-buy-now-open>
+        <button class="header__buy-now-btn-mobile btn-arrow" type="button" data-buy-now-mobile-open>
           Buy now
         </button>
       </div>
+      <button class="header__buy-now-btn btn-arrow" type="button" data-buy-now-open>
+        Buy now
+      </button>
     </header>
 
     <!-- main -->
@@ -104,9 +107,9 @@
     <footer class="footer"></footer>
 
     <!-- buy now modal -->
-    <div class="buy-now" data-buy-now>
+    <div class="buy-now is-hidden" data-buy-now data-buy-now-mobile="">
       <div class="buy-now__modal">
-        <button class="buy-now__close-btn" type="button" data-buy-now-close>
+        <button class="buy-now__close-btn" type="button" data-buy-now-mobile-close>
           <svg class="icon" width="16" height="16">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -213,5 +216,6 @@
     <!-- script -->
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/modal-mobile.js"></script>
   </body>
 </html>
