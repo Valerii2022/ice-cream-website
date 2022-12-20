@@ -30,7 +30,7 @@
           <use href="./images/icons.svg#icon-burger"></use>
         </svg>
       </button>
-      <div class="header__mobile-menu is-hidden" data-mobile>
+      <div class="header__mobile-menu is-hidden-mobile" data-mobile>
         <picture>
           <source
             srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
@@ -181,35 +181,37 @@
               <h3 class="buy-now__subtitle">milkshake</h3>
             </li>
           </ul>
-          <label>
-            <input
-              class="buy-now__input"
-              type="text"
-              name="user-name"
-              placeholder="Name"
-              minlength="3"
-              required
-            />
-          </label>
-          <label>
-            <input
-              class="buy-now__input"
-              type="tel"
-              name="user-phone"
-              placeholder="Phone"
-              pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-              title="+38 (096) 111-11-11"
-              required
-            />
-          </label>
-          <label for="textarea"></label>
-          <textarea
-            class="buy-now__textarea"
-            name="feedback"
-            placeholder="Comment"
-            id="textarea"
-          ></textarea>
-          <button class="buy-now__form-btn button" type="submit">Submit</button>
+          <div class="buy-now__bottom">
+            <label>
+              <input
+                class="buy-now__input"
+                type="text"
+                name="user-name"
+                placeholder="Name"
+                minlength="3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                class="buy-now__input"
+                type="tel"
+                name="user-phone"
+                placeholder="Phone"
+                pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                title="+38 (096) 111-11-11"
+                required
+              />
+            </label>
+            <label for="textarea"></label>
+            <textarea
+              class="buy-now__textarea"
+              name="feedback"
+              placeholder="Comment"
+              id="textarea"
+            ></textarea>
+            <button class="buy-now__form-btn button" type="submit">Submit</button>
+          </div>
         </form>
       </div>
     </div>

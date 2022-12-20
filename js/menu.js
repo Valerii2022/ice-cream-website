@@ -12,12 +12,12 @@
   refs.menuList.addEventListener('click', removeMenu);
 
   function toggleMenu() {
-    refs.menu.classList.toggle('is-hidden');
+    refs.menu.classList.toggle('is-hidden-mobile');
     refs.body.classList.toggle('no-scroll');
   }
 
   function removeMenu() {
-    refs.menu.classList.add('is-hidden');
+    refs.menu.classList.add('is-hidden-mobile');
     refs.body.classList.remove('no-scroll');
   }
 })();
