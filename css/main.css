@@ -500,7 +500,7 @@ body.no-scroll {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -1167,14 +1167,19 @@ body.no-scroll {
 .about {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url(../../images/bg1-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
+  background-image: url(../../images/bg1-mob.jpg);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .about {
     background-image: url(../../images/bg1-mob@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .about {
+    padding-bottom: 82px;
   }
 }
 .about__uptitle {
@@ -1186,6 +1191,13 @@ body.no-scroll {
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
+@media screen and (min-width: 768px) {
+  .about__uptitle {
+    margin-bottom: 12px;
+    font-size: 22px;
+    line-height: 1.23;
+  }
+}
 .about__title {
   margin-bottom: 148px;
   font-family: var(--seymoure);
@@ -1196,19 +1208,192 @@ body.no-scroll {
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
+@media screen and (min-width: 768px) {
+  .about__title {
+    margin-bottom: 200px;
+    font-size: 34px;
+    line-height: 1.24;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+  }
+}
 .about__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
   border-radius: 24px;
-  padding-top: 106px;
+  padding-top: 123px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 13px;
 }
+@media screen and (max-width: 767px) {
+  .about__item {
+    max-width: 280px;
+    min-height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__item {
+    width: calc((100% - 32px) / 3);
+    min-height: 428px;
+    padding-top: 108px;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
 .about__item:first-child {
-  background: #AEC6A5;
+  background: #aec6a5;
+}
+.about__item:first-child::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(156, 190, 143, 0.7)), to(rgba(156, 190, 143, 0.7))), #d9d9d9;
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
+  -webkit-box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+          box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+.about__item:first-child::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../../images/ice-cream-mob.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .about__item:first-child::after {
+    background-image: url("../../images/ice-cream-mob@2x.png");
+  }
 }
 .about__item:nth-child(2) {
-  background: #EFD478;
+  background: #efd478;
+}
+.about__item:nth-child(2)::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(248, 210, 78, 0.7)), to(rgba(248, 210, 78, 0.7))), #d9d9d9;
+  background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #d9d9d9;
+  -webkit-box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+          box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+}
+.about__item:nth-child(2)::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../../images/ice-coffee-mob.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .about__item:nth-child(2)::after {
+    background-image: url("../../images/ice-coffee-mob@2x.png");
+  }
 }
 .about__item:last-child {
-  background: #D6936D;
+  background: #d6936d;
+}
+.about__item:last-child::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(213, 117, 63, 0.7)), to(rgba(213, 117, 63, 0.7))), #d9d9d9;
+  background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #d9d9d9;
+  -webkit-box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+.about__item:last-child::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url("../../images/milkshake-mob.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .about__item:last-child::after {
+    background-image: url("../../images/milkshake-mob@2x.png");
+  }
+}
+.about__item:not(:last-child) {
+  margin-bottom: 164px;
+}
+.about__subtitle {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.22;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+@media screen and (min-width: 768px) {
+  .about__subtitle {
+    font-size: 22px;
+    line-height: 1.23;
+  }
+}
+.about__descr {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 14px;
+  line-height: 1.79;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--secondary-text-color);
+}
+.about__btn {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+.about__arrow-icon {
+  fill: currentColor;
 }/*# sourceMappingURL=main.css.map */
