@@ -2,41 +2,57 @@
    padding-top: 60px;
    padding-bottom: 60px;
    background-repeat: no-repeat;
-   background-position: center;
-   background-size: 100% 100%;
-   background-image: url(./images/bg1-mob.jpg);
-   @include retina {
-      background-image: url(./images/bg1-mob@2x.jpg);
-   }
+   background-size: cover;
 
+   @media screen and (max-width:767px){
+   // background-position: center, top, bottom ;
+   background-image: url(../images/bg1-mob.jpg);
+
+   @include retina {
+      background-image: url(../images/bg1a-mob@2x.jpg), url(../images/bg1b-mob@2x.jpg), url(../images/bg1c-mob@2x.jpg);
+   }
+   }
+   
    @include tablet {
       padding-bottom: 82px;
+      background-image: url(../images/bg1-tab.jpg);
+      @include retina {
+         background-image: url(../images/bg1-tab@2x.jpg);
+      }
+   }
+
+   @include desktop {
+      padding-bottom: 57px;
+
+      background-image: url(../images/bg1.jpg);
+      @include retina {
+         background-image: url(../images/bg1@2x.jpg);
+      }
    }
 
    &__uptitle {
       margin-bottom: 12px;
-      font-weight: 800;
-      font-size: 18px;
-      line-height: 1.22;
+      @include font(800, 12px, 1.22, null);
       text-align: center;
       text-transform: uppercase;
 
       color: var(--secondary-text-color);
 
       @include tablet {
-         margin-bottom: 12px;
          font-size: 22px;
          line-height: 1.23;
+      }
+
+      @include desktop{
+         font-size: 30px;
       }
    }
 
    &__title {
       margin-bottom: 148px;
       font-family: var(--seymoure);
-      font-size: 30px;
-      line-height: 1.27;
+      @include font(8null, 30px, 1.27, 0.04em);
       text-align: center;
-      letter-spacing: 0.04em;
       text-transform: uppercase;
 
       color: var(--secondary-text-color);
@@ -46,12 +62,22 @@
          font-size: 34px;
          line-height: 1.24;
       }
+
+      @include desktop{
+         margin-bottom: 303px;
+         font-size: 36px;
+            ine-height: 1.25;
+      }
    }
 
    &__list {
       @include tablet {
          display: flex;
          gap: 16px;
+      }
+
+      @include desktop{
+         gap: 32px;
       }
    }
 
@@ -79,37 +105,79 @@
          padding-left: 26px;
          padding-right: 26px;
       }
+
+      @include desktop{
+         width: calc((100% - 64px) / 3);
+         min-height: 536px;
+         padding-top: 166px;
+         padding-left: 64px;
+         padding-right: 64px;
+         padding-bottom: 53px;
+      }
    }
 
    &__item:first-child {
       background: #aec6a5;
    }
 
-   &__item:first-child::before {
-      content: "";
+   &__item::before,
+   &__item::after{
+      content: '';
       width: 200px;
       height: 200px;
       border-radius: 50%;
       position: absolute;
-      top: 0;
       left: 50%;
       transform: translate(-50%, -50%);
+      background-size: contain;
+
+      @include desktop{
+         width: 300px;
+         height: 300px;
+      }
+   }
+
+      &__item::before{
+         top: 10px;
+
+      @include tablet {
+         top: -10px;
+      }
+
+      @include desktop{
+         top: -25px;
+      }
+      }
+
+      &__item::after {
+         top: 0px;
+
+      @include tablet{
+         top: -20px;
+      }
+
+      @include desktop{
+         top: -35px;
+      }
+   }
+
+   &__item:first-child::before {
       background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #d9d9d9;
       box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
    }
 
    &__item:first-child::after {
-      content: "";
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      position: absolute;
-      top: -11px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-image: url("../../images/ice-cream-mob.png");
+      background-image: url("../images/ice-cream-mob.png");
       @include retina {
-         background-image: url("../../images/ice-cream-mob@2x.png");
+         background-image: url("../images/ice-cream-mob@2x.png");
+      }
+
+      @include desktop{
+         background-image: url("../images/ice-cream.png");
+         
+         @include retina {
+            background-image: url("../images/ice-cream@2x.png");
+         }
       }
    }
 
@@ -118,30 +186,22 @@
    }
 
    &__item:nth-child(2)::before {
-      content: "";
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
       background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #d9d9d9;
       box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
    }
 
    &__item:nth-child(2)::after {
-      content: "";
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      position: absolute;
-      top: -11px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-image: url("../../images/ice-coffee-mob.png");
+      background-image: url("../images/ice-coffee-mob.png");
       @include retina {
-         background-image: url("../../images/ice-coffee-mob@2x.png");
+         background-image: url("../images/ice-coffee-mob@2x.png");
+      }
+
+      @include desktop {
+         background-image: url("../images/ice-coffee.png");
+
+         @include retina {
+            background-image: url("../images/ice-coffee@2x.png");
+         }
       }
    }
 
@@ -150,35 +210,29 @@
    }
 
    &__item:last-child::before {
-      content: "";
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
       background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #d9d9d9;
       box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
    }
 
    &__item:last-child::after {
-      content: "";
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      position: absolute;
-      top: -11px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-image: url("../../images/milkshake-mob.png");
+      background-image: url("../images/milkshake-mob.png");
       @include retina {
-         background-image: url("../../images/milkshake-mob@2x.png");
+         background-image: url("../images/milkshake-mob@2x.png");
+      }
+
+      @include desktop {
+         background-image: url("../images/milkshake.png");
+
+         @include retina {
+            background-image: url("../images/milkshake@2x.png");
+         }
       }
    }
 
    &__item:not(:last-child) {
-      margin-bottom: 164px;
+      @media screen and (max-width:767px){
+         margin-bottom: 164px;
+      }
    }
 
    &__subtitle {
@@ -197,6 +251,11 @@
          font-size: 22px;
          line-height: 1.23;
       }
+
+      @include desktop{
+         margin-bottom: 65px;
+         font-size: 30px;
+      }
    }
 
    &__descr {
@@ -207,6 +266,11 @@
       letter-spacing: 0.04em;
 
       color: var(--secondary-text-color);
+
+      @include desktop{
+         font-size: 16px;
+         line-height: 1.75;
+      }
    }
 
    &__btn {
