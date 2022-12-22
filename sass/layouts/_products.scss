@@ -1,12 +1,12 @@
-.about {
+.products {
    padding-top: 60px;
    padding-bottom: 60px;
    background-repeat: no-repeat;
    background-position: center;
    background-size: 100% 100%;
-   background-image: url(../../images/bg1-mob.jpg);
+   background-image: url(./images/bg1-mob.jpg);
    @include retina {
-      background-image: url(../../images/bg1-mob@2x.jpg);
+      background-image: url(./images/bg1-mob@2x.jpg);
    }
 
    @include tablet {
@@ -48,7 +48,7 @@
       }
    }
 
-   &-list {
+   &__list {
       @include tablet {
          display: flex;
          gap: 16px;
