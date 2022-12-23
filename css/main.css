@@ -1531,8 +1531,8 @@ body.no-scroll {
             transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    max-width: 568px;
-    padding: 32px 54px;
+    width: 568px;
+    padding: 32px 40px;
   }
 }
 .ingredients__close-btn {
@@ -1647,6 +1647,7 @@ body.no-scroll {
     height: 90px;
     font-size: 12px;
     line-height: 1.25;
+    padding-bottom: 12px;
   }
 }
 .ingredients__value {
@@ -1684,6 +1685,11 @@ body.no-scroll {
 }
 .ingredients__ingredients-list {
   margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .ingredients__ingredients-list {
+    margin-bottom: 48px;
+  }
 }
 .ingredients__ingr-item {
   display: -webkit-box;
