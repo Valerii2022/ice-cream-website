@@ -109,7 +109,7 @@
           <li class="products__item">
             <h3 class="products__subtitle">ice cream</h3>
             <p class="products__descr">Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer</p>
-            <button class="products__btn">
+            <button class="products__btn" data-ingredients-open>
               <svg class="products__arrow-icon" width="40" height="14">
                 <use href="./images/icons.svg#icon-arrow"></use>
               </svg>
@@ -187,7 +187,7 @@
     </footer>
 
     <!-- buy now modal -->
-    <div class="buy-now is-hidden" data-buy-now data-buy-now-mobile="">
+    <div class="buy-now is-hidden" data-buy-now data-buy-now-mobile>
       <div class="buy-now__modal">
         <button class="buy-now__close-btn" type="button" data-buy-now-mobile-close>
           <svg class="icon" width="16" height="16">
@@ -295,9 +295,50 @@
         </form>
       </div>
     </div>
+    <!-- ingredients modal -->
+    <div class="ingredients is-hidden" data-ingredients>
+        <div class="ingredients__modal">
+          <button class="ingredients__close-btn" type="button" data-ingredients-close>
+            <svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <h2 class="ingredients__title">Chololate icecream</h2>
+          <ul class="ingredients__benefits-list">
+            <li class="ingredients__property-item"><p class="ingredients__property"><span class="ingredients__value">320</span>kcal</p></li>
+            <li class="ingredients__property-item"><p class="ingredients__property"><span class="ingredients__value">4g</span>Prote...</p></li>
+            <li class="ingredients__property-item"><p class="ingredients__property"><span class="ingredients__value">8,2g</span>Fats</p></li>
+            <li class="ingredients__property-item"><p class="ingredients__property"><span class="ingredients__value">40,4g</span>Carbs</p></li>
+          </ul>
+          <h3 class="ingredients__subtitle">Ingredients</h3>
+          <ul class="ingredients__ingredients-list">
+            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Milk</span><span class="ingredients__amount">100ml</span></li>
+            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Belgian chocolate</span><span class="ingredients__amount">20g</span></li>
+            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Cream</span><span class="ingredients__amount">150 ml</span></li>
+            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Cocoa powder</span><span class="ingredients__amount">30g</span></li>
+            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Sugar</span><span class="ingredients__amount">40g</span></li>
+            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Vanilla sugar</span><span class="ingredients__amount">10g</span></li>
+          </ul>
+          <form action="#" class="ingredients__form">
+            <div class="ingredients__bottom">
+              <label>
+                <input class="ingredients__input" type="text" name="name" placeholder="Name" minlength="3" required />
+              </label>
+              <label>
+                <input class="ingredients__input" type="tel" name="phone" placeholder="Phone"
+                  pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="+38 (096) 111-11-11" required />
+              </label>
+              <label for="feedback"></label>
+              <textarea class="ingredients__textarea" name="feedback" placeholder="Comment" id="feedback"></textarea>
+              <button class="ingredients__form-btn button" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+    </div>
     <!-- script -->
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/modal-mobile.js"></script>
+    <script src="./js/ingredients.js"></script>
   </body>
 </html>

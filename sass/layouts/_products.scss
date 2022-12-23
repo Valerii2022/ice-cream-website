@@ -5,11 +5,10 @@
    background-size: cover;
 
    @media screen and (max-width:767px){
-   // background-position: center, top, bottom ;
    background-image: url(../images/bg1-mob.jpg);
 
    @include retina {
-      background-image: url(../images/bg1a-mob@2x.jpg), url(../images/bg1b-mob@2x.jpg), url(../images/bg1c-mob@2x.jpg);
+      background-image: url(../images/bg1-mob@2x.jpg);
    }
    }
    
@@ -277,9 +276,21 @@
       margin-right: auto;
       margin-left: auto;
       display: block;
+      cursor: pointer;
+      outline: none;
+      border: none;
+   }
+   
+   &__btn:hover{
+      color: var(--btn-hover-color);
+   }
+
+   &__btn:focus {
+      color: var(--primary-text-color);
    }
 
    &__arrow-icon {
       fill: currentColor;
    }
+
 }
