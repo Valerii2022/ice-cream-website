@@ -1,0 +1,75 @@
+.read-more {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   overflow: auto;
+   z-index: 2000;
+   background-color: rgba(132, 161, 120, 0.7);
+
+   &__modal {
+      border: 2px solid var(--btn-color);
+      border-radius: 10px;
+      position: absolute;
+
+      background: var(--primary-text-color);
+      color: var(--secondary-text-color);
+
+      @media screen and (max-width: 767px) {
+         margin-top: 5px;
+         max-width: 280px;
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-bottom: 28px;
+         padding-top: 28px;
+         transform: translateX(-50%);
+         left: 50%;
+      }
+
+      @include tablet {
+         transform: translate(-50%, -50%);
+         left: 50%;
+         top: 50%;
+         width: 568px;
+         padding: 32px 40px;
+      }
+   }
+
+   &__close-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+
+      @include tablet {
+         top: 24px;
+         right: 24px;
+      }
+   }
+
+   &__close-btn .icon {
+      fill: currentColor;
+   }
+
+   &__title {
+      margin-bottom: 181px;
+
+      font-family: var(--seymoure);
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+
+      @media screen and (max-width: 767px) {
+         max-width: 142px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      @include tablet {
+         margin-bottom: 187px;
+         font-size: 20px;
+         line-height: 1.4;
+      }
+   }
+}
