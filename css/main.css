@@ -738,6 +738,7 @@ body.no-scroll {
 }
 
 .hero {
+  background-color: var(--primary-background-color);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -1527,20 +1528,12 @@ body.no-scroll {
 }
 @media screen and (min-width: 768px) {
   .ingredients__modal {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    width: 568px;
-    padding: 32px 40px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .ingredients__modal {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     left: 50%;
     top: 10px;
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
+    width: 568px;
+    padding: 32px 40px;
   }
 }
 .ingredients__close-btn {
@@ -2049,12 +2042,8 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .read-more__modal {
-    margin-top: 5px;
     max-width: 280px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 28px;
-    padding-top: 28px;
+    padding: 28px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     left: 50%;
