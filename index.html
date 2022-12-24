@@ -71,9 +71,7 @@
           Buy now
         </button>
       </div>
-      <button class="header__buy-now-btn btn-arrow" type="button" data-buy-now-open>
-        Buy now
-      </button>
+      <button class="header__buy-now-btn btn-arrow" type="button" data-buy-now-open>Buy now</button>
     </header>
 
     <!-- main -->
@@ -108,7 +106,10 @@
         <ul class="products__list">
           <li class="products__item">
             <h3 class="products__subtitle">ice cream</h3>
-            <p class="products__descr">Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer</p>
+            <p class="products__descr">
+              Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural
+              stabilizer
+            </p>
             <button class="products__btn" data-ingredients-open>
               <svg class="products__arrow-icon" width="40" height="14">
                 <use href="./images/icons.svg#icon-arrow"></use>
@@ -117,7 +118,10 @@
           </li>
           <li class="products__item">
             <h3 class="products__subtitle">ice coffee</h3>
-            <p class="products__descr">Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers</p>
+            <p class="products__descr">
+              Fragrant invigorating drink created from 100% natural ingredients without the use of
+              preservatives and flavor enhancers
+            </p>
             <button class="products__btn">
               <svg class="products__arrow-icon" width="40" height="14">
                 <use href="./images/icons.svg#icon-arrow"></use>
@@ -126,7 +130,10 @@
           </li>
           <li class="products__item">
             <h3 class="products__subtitle">milkshakes</h3>
-            <p class="products__descr">Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice</p>
+            <p class="products__descr">
+              Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries
+              and other sweets of your choice
+            </p>
             <button class="products__btn">
               <svg class="products__arrow-icon" width="40" height="14">
                 <use href="./images/icons.svg#icon-arrow"></use>
@@ -139,13 +146,22 @@
       <section class="container about">
         <p class="about__uptitle">tradition and love</p>
         <h2 class="about__title">how it’s made?</h2>
-        <div class="about__descr-wrap" >
-          <p class="about__descr">Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and
-          we follow it when creating our handmade desserts.</p>
-          <p class="about__descr">We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children
-          from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.</p>
+        <picture>
+          <source />
+        </picture>
+        <div class="about__descr-wrap">
+          <p class="about__descr">
+            Ice is a place where you will become not only a little happier, but also healthier.
+            Health is the main value for us, and we follow it when creating our handmade desserts.
+          </p>
+          <p class="about__descr">
+            We use traditional recipes and 100% natural ingredients. Our products are so natural
+            that they can be given to children from the age of three years. Sweets lovers can expect
+            55 types of ice cream, 15 types of coffee and 23 milkshakes.
+          </p>
+          <p class="about__descr">This is enough to choose ice cream and coffee for any mood!</p>
+          <button class="about__btn btn-arrow">Read more</button>
         </div>
-        <button class="about__btn btn-arrow">Read more</button>
       </section>
     </main>
 
@@ -160,21 +176,36 @@
           <div class="footer__social-wrap">
             <ul class="footer__social-list">
               <li class="footer__list-item">
-                <a href="https://github.com/" target="_blank" rel="noreferrer noopener" class="footer__link">
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="footer__link"
+                >
                   <svg class="footer__icon" width="34" height="34">
                     <use href="./images/icons.svg#github"></use>
                   </svg>
                 </a>
               </li>
               <li class="footer__list-item">
-                <a href="https://telegram.org/" class="footer__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="https://telegram.org/"
+                  class="footer__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <svg class="footer__icon" width="34" height="34">
                     <use href="./images/icons.svg#telegram"></use>
                   </svg>
                 </a>
               </li>
               <li class="footer__list-item">
-                <a href="https://www.facebook.com/" class="footer__link" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="https://www.facebook.com/"
+                  class="footer__link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <svg class="footer__icon" width="34" height="34">
                     <use href="./images/icons.svg#facebook"></use>
                   </svg>
@@ -309,43 +340,88 @@
     </div>
     <!-- ingredients modal -->
     <div class="ingredients is-hidden" data-ingredients>
-        <div class="ingredients__modal">
-          <button class="ingredients__close-btn" type="button" data-ingredients-close>
-            <svg class="icon" width="16" height="16">
-              <use href="./images/icons.svg#icon-close"></use>
-            </svg>
-          </button>
-          <h2 class="ingredients__title">Chololate icecream</h2>
-          <ul class="ingredients__benefits-list">
-            <li class="ingredients__property-item"><p class="ingredients__property"><span class="ingredients__value">320</span>kcal</p></li>
-            <li class="ingredients__property-item"><p class="ingredients__property"><span class="ingredients__value">4g</span>Prote...</p></li>
-            <li class="ingredients__property-item"><p class="ingredients__property"><span class="ingredients__value">8,2g</span>Fats</p></li>
-            <li class="ingredients__property-item"><p class="ingredients__property"><span class="ingredients__value">40,4g</span>Carbs</p></li>
-          </ul>
-          <h3 class="ingredients__subtitle">Ingredients</h3>
-          <ul class="ingredients__ingredients-list">
-            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Milk</span><span class="ingredients__amount">100ml</span></li>
-            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Belgian chocolate</span><span class="ingredients__amount">20g</span></li>
-            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Cream</span><span class="ingredients__amount">150 ml</span></li>
-            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Cocoa powder</span><span class="ingredients__amount">30g</span></li>
-            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Sugar</span><span class="ingredients__amount">40g</span></li>
-            <li class="ingredients__ingr-item"><span class="ingredients__ingredient">Vanilla sugar</span><span class="ingredients__amount">10g</span></li>
-          </ul>
-          <form action="#" class="ingredients__form">
-            <div class="ingredients__bottom">
-              <label>
-                <input class="ingredients__input" type="text" name="name" placeholder="Name" minlength="3" required />
-              </label>
-              <label>
-                <input class="ingredients__input" type="tel" name="phone" placeholder="Phone"
-                  pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="+38 (096) 111-11-11" required />
-              </label>
-              <label for="feedback"></label>
-              <textarea class="ingredients__textarea" name="feedback" placeholder="Comment" id="feedback"></textarea>
-              <button class="ingredients__form-btn button" type="submit">Submit</button>
-            </div>
-          </form>
-        </div>
+      <div class="ingredients__modal">
+        <button class="ingredients__close-btn" type="button" data-ingredients-close>
+          <svg class="icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="ingredients__title">Chololate icecream</h2>
+        <ul class="ingredients__benefits-list">
+          <li class="ingredients__property-item">
+            <p class="ingredients__property"><span class="ingredients__value">320</span>kcal</p>
+          </li>
+          <li class="ingredients__property-item">
+            <p class="ingredients__property"><span class="ingredients__value">4g</span>Prote...</p>
+          </li>
+          <li class="ingredients__property-item">
+            <p class="ingredients__property"><span class="ingredients__value">8,2g</span>Fats</p>
+          </li>
+          <li class="ingredients__property-item">
+            <p class="ingredients__property"><span class="ingredients__value">40,4g</span>Carbs</p>
+          </li>
+        </ul>
+        <h3 class="ingredients__subtitle">Ingredients</h3>
+        <ul class="ingredients__ingredients-list">
+          <li class="ingredients__ingr-item">
+            <span class="ingredients__ingredient">Milk</span
+            ><span class="ingredients__amount">100ml</span>
+          </li>
+          <li class="ingredients__ingr-item">
+            <span class="ingredients__ingredient">Belgian chocolate</span
+            ><span class="ingredients__amount">20g</span>
+          </li>
+          <li class="ingredients__ingr-item">
+            <span class="ingredients__ingredient">Cream</span
+            ><span class="ingredients__amount">150 ml</span>
+          </li>
+          <li class="ingredients__ingr-item">
+            <span class="ingredients__ingredient">Cocoa powder</span
+            ><span class="ingredients__amount">30g</span>
+          </li>
+          <li class="ingredients__ingr-item">
+            <span class="ingredients__ingredient">Sugar</span
+            ><span class="ingredients__amount">40g</span>
+          </li>
+          <li class="ingredients__ingr-item">
+            <span class="ingredients__ingredient">Vanilla sugar</span
+            ><span class="ingredients__amount">10g</span>
+          </li>
+        </ul>
+        <form action="#" class="ingredients__form">
+          <div class="ingredients__bottom">
+            <label>
+              <input
+                class="ingredients__input"
+                type="text"
+                name="name"
+                placeholder="Name"
+                minlength="3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                class="ingredients__input"
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                title="+38 (096) 111-11-11"
+                required
+              />
+            </label>
+            <label for="feedback"></label>
+            <textarea
+              class="ingredients__textarea"
+              name="feedback"
+              placeholder="Comment"
+              id="feedback"
+            ></textarea>
+            <button class="ingredients__form-btn button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
     <!-- script -->
     <script src="./js/menu.js"></script>

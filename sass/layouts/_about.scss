@@ -1,85 +1,201 @@
-.about{
-    padding-top: 61px;
-    padding-bottom: 50px;
-    background-color: var(--primary-background-color);
+.about {
+   padding-top: 61px;
+   padding-bottom: 50px;
+   background-color: var(--primary-background-color);
 
-    &__uptitle {
-        margin-bottom: 12px;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 1.22;
-    
-        text-align: center;
-        text-transform: uppercase;
-    }
-    
-    &__title {
-        position: relative;
-        margin-bottom: 372px;
-        margin-left: auto;
-        margin-right: auto;
-        font-family: var(--seymoure);
-        font-size: 30px;
-        line-height: 1.27;
-        text-align: center;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
+   @include tablet {
+      padding-top: 60px;
+      padding-bottom: 80px;
+   }
 
-        @media screen and (max-width: 767px){
-            max-width: 210px;
-        }
-    }
+   @include desktop {
+      padding-bottom: 146px;
+   }
 
-    &__title::before{
-        content: '';
-        width: 278px;
-        height: 278px;
-        border-radius: 50%;
-        background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
-        box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
-        position: absolute;
-        bottom: -332px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+   &__uptitle {
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.22;
 
-    &__title::after{
-        content: '';
-        width: 278px;
-        height: 278px;
-        border-radius: 50%;
-        position: absolute;
-        bottom: -354px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-size: contain;
-        background-image: url("../images/cow-mob.png");
-        @include retina {
-            background-image: url("../images/cow-mob@2x.png");
-        }
-    }
-    
-    &__descr {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 220px;
-        font-size: 12px;
-        line-height: 1.75;
-        
-        text-align: center;
-        letter-spacing: 0.04em;
-    }
+      text-align: center;
+      text-transform: uppercase;
 
-    &__descr:first-child{
-        margin-bottom: 4px;
-    }
+      @include tablet {
+         font-weight: 800;
+         margin-bottom: 12px;
+         font-size: 22px;
+         line-height: 1.23;
+      }
 
-    &__descr-wrap{
-        margin-bottom: 10px;
-    }
-    
-    &__btn {
-        margin-right: auto;
-        margin-left: auto;
-    }
+      @include desktop {
+         font-size: 30px;
+      }
+   }
+
+   &__title {
+      position: relative;
+      margin-bottom: 372px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: var(--seymoure);
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.27;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 767px) {
+         max-width: 210px;
+      }
+
+      @include tablet {
+         margin-bottom: 80px;
+         font-size: 34px;
+         line-height: 1.26;
+      }
+
+      @include desktop {
+         margin-bottom: 172px;
+         font-size: 36px;
+         line-height: 1.25;
+      }
+   }
+
+   &__title::before {
+      content: "";
+      width: 278px;
+      height: 278px;
+      border-radius: 50%;
+      background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #d9d9d9;
+      box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+      position: absolute;
+      bottom: -332px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include tablet {
+         width: 330px;
+         height: 330px;
+         bottom: -402px;
+         left: 165px;
+      }
+
+      @include desktop {
+         width: 490px;
+         height: 490px;
+         bottom: -572px;
+         left: 245px;
+      }
+   }
+
+   &__title::after {
+      content: "";
+      width: 278px;
+      height: 278px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -354px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-image: url("../images/cow-mob.png");
+      @include retina {
+         background-image: url("../images/cow-mob@2x.png");
+      }
+
+      @include tablet {
+         width: 330px;
+         height: 330px;
+         bottom: -428px;
+         left: 165px;
+
+         background-image: url("../images/cow-tab.png");
+         @include retina {
+            background-image: url("../images/cow-tab@2x.png");
+         }
+      }
+
+      @include desktop {
+         width: 490px;
+         height: 490px;
+         bottom: -611px;
+         left: 245px;
+
+         background-image: url("../images/cow.png");
+         @include retina {
+            background-image: url("../images/cow@2x.png");
+         }
+      }
+   }
+
+   &__descr-wrap {
+      @include tablet {
+         width: calc(50% - 16px);
+         margin-left: auto;
+         padding-right: 4px;
+      }
+   }
+
+   &__descr {
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 12px;
+      line-height: 1.75;
+
+      text-align: center;
+      letter-spacing: 0.04em;
+
+      @media screen and (max-width: 767px) {
+         max-width: 220px;
+      }
+
+      @include tablet {
+         text-align: left;
+      }
+
+      @include desktop {
+         font-size: 16px;
+      }
+   }
+
+   &__descr:first-child {
+      margin-bottom: 4px;
+
+      @include tablet {
+         margin-bottom: 8px;
+      }
+   }
+
+   &__descr:nth-child(2) {
+      margin-bottom: 10px;
+
+      @include tablet {
+         margin-bottom: 8px;
+      }
+   }
+
+   &__descr:nth-child(3) {
+      @media screen and (max-width: 767px) {
+         display: none;
+      }
+
+      @include tablet {
+         margin-left: 0;
+         margin-bottom: 32px;
+         max-width: 280px;
+      }
+
+      @include desktop {
+         margin-bottom: 54px;
+      }
+   }
+
+   &__btn {
+      @media screen and (max-width: 767px) {
+         margin-right: auto;
+         margin-left: auto;
+      }
+   }
 }
