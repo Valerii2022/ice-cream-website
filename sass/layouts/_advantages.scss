@@ -2,15 +2,135 @@
    background-color: var(--primary-background-color);
    padding-top: 66px;
    padding-bottom: 64px;
+   text-align: center;
 
-   // &__title {
-   // }
-   // &__list {
-   // }
-   // &__item {
-   // }
-   // &__value {
-   // }
-   // &__descr {
-   // }
+   @include tablet{
+      padding-top: 82px;
+      padding-bottom: 204px;
+   }
+
+   @include desktop{
+      padding-top: 90px;
+      padding-bottom: 178px;
+   }
+
+   &__list{
+      @media screen and (min-width: 768px) and (max-width: 1199px){
+         padding-left: 44px;
+         padding-right: 44px;
+      }
+
+      @include tablet{
+         display: flex;
+         gap: 80px;
+      }
+
+      @include desktop{
+         gap: 32px;
+      }
+   }
+
+   &__item{
+      position: relative;
+
+      @media screen and (max-width: 767px) {
+         max-width: 230px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px){
+         max-width: 152px;
+      }
+   }
+
+   &__item::before{
+      content: '';
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -66px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+
+      @include tablet{
+         top: -82px;
+      }
+
+      @include tablet {
+         top: -90px;
+      }
+   }
+
+   &__item:first-child:before{
+      content: '';
+      background-image: url("../images/cow-icon.png");
+         @include retina {
+            background-image: url("../images/cow-icon@2x.png");
+         }
+   }
+   
+   &__item:nth-child(2):before {
+      content: '';
+      background-image: url("../images/ice-crema-icon.png");
+
+      @include retina {
+         background-image: url("../images/ice-crema-icon@2x.png");
+      }
+   }
+
+   &__item:last-child:before {
+      content: '';
+      background-image: url("../images/weight-icon.png");
+
+      @include retina {
+         background-image: url("../images/weight-icon@2x.png");
+      }
+   }
+
+   &__item:not(:last-child) {
+      @media screen and (max-width: 767px){
+         margin-bottom: 94px;
+      }
+   }
+
+   &__value {
+      display: inline-block;
+      margin-bottom: 16px;
+
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.22;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      @include tablet{
+         margin-bottom: 12px;
+         font-size: 48px;
+         line-height: 1.23;
+      }
+
+      @include desktop{
+         font-size: 58px;
+         line-height: 1.22;
+      }
+   }
+
+   &__descr {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.67;
+      text-align: center;
+
+      @include tablet{
+         font-size: 14px;
+         line-height: 1.71;
+      }
+
+      @include desktop{
+         font-size: 16px;
+         line-height: 1.75;
+      }
+   }
 }
