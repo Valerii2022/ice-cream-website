@@ -4,8 +4,8 @@
    padding-left: 34px;
    padding-right: 34px;
    border-radius: 10px;
-   cursor: pointer;
    outline: none;
+   cursor: inherit;
 
    @include font(600, 14px, 1.21, null);
    display: flex;
@@ -39,8 +39,8 @@
    padding-left: 34px;
    padding-right: 34px;
    border-radius: 10px;
-   cursor: pointer;
    outline: none;
+   cursor: inherit;
 
    @include font(600, 14px, 1.21, null);
    display: flex;
@@ -88,8 +88,8 @@
    padding-right: 11px;
    border: 2px solid var(--btn-color);
    border-radius: 8px;
-   cursor: pointer;
    outline: none;
+   cursor: inherit;
 
    @include font(600, 8px, 1.25, null);
 
@@ -121,13 +121,13 @@
 }
 
 .link {
-   cursor: pointer;
    outline: none;
 
    font-weight: 600;
    font-size: 8px;
    line-height: 1.25;
    text-decoration-line: underline;
+   cursor: inherit;
 
    color: var(--btn-color);
 

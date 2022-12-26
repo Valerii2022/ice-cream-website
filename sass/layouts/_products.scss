@@ -4,14 +4,14 @@
    background-repeat: no-repeat;
    background-size: cover;
 
-   @media screen and (max-width:767px){
-   background-image: url(../images/bg1-mob.jpg);
+   @media screen and (max-width: 767px) {
+      background-image: url(../images/bg1-mob.jpg);
 
-   @include retina {
-      background-image: url(../images/bg1-mob@2x.jpg);
+      @include retina {
+         background-image: url(../images/bg1-mob@2x.jpg);
+      }
    }
-   }
-   
+
    @include tablet {
       padding-bottom: 82px;
       background-image: url(../images/bg1-tab.jpg);
@@ -42,7 +42,7 @@
          line-height: 1.23;
       }
 
-      @include desktop{
+      @include desktop {
          font-size: 30px;
       }
    }
@@ -62,10 +62,10 @@
          line-height: 1.24;
       }
 
-      @include desktop{
+      @include desktop {
          margin-bottom: 303px;
          font-size: 36px;
-            ine-height: 1.25;
+         ine-height: 1.25;
       }
    }
 
@@ -75,7 +75,7 @@
          gap: 16px;
       }
 
-      @include desktop{
+      @include desktop {
          gap: 32px;
       }
    }
@@ -105,7 +105,7 @@
          padding-right: 26px;
       }
 
-      @include desktop{
+      @include desktop {
          width: calc((100% - 64px) / 3);
          min-height: 536px;
          padding-top: 166px;
@@ -120,8 +120,8 @@
    }
 
    &__item::before,
-   &__item::after{
-      content: '';
+   &__item::after {
+      content: "";
       width: 200px;
       height: 200px;
       border-radius: 50%;
@@ -130,32 +130,32 @@
       transform: translate(-50%, -50%);
       background-size: contain;
 
-      @include desktop{
+      @include desktop {
          width: 300px;
          height: 300px;
       }
    }
 
-      &__item::before{
-         top: 10px;
+   &__item::before {
+      top: 10px;
 
       @include tablet {
          top: -10px;
       }
 
-      @include desktop{
+      @include desktop {
          top: -25px;
       }
-      }
+   }
 
-      &__item::after {
-         top: 0px;
+   &__item::after {
+      top: 0px;
 
-      @include tablet{
+      @include tablet {
          top: -20px;
       }
 
-      @include desktop{
+      @include desktop {
          top: -35px;
       }
    }
@@ -171,9 +171,9 @@
          background-image: url("../images/ice-cream-mob@2x.png");
       }
 
-      @include desktop{
+      @include desktop {
          background-image: url("../images/ice-cream.png");
-         
+
          @include retina {
             background-image: url("../images/ice-cream@2x.png");
          }
@@ -229,7 +229,7 @@
    }
 
    &__item:not(:last-child) {
-      @media screen and (max-width:767px){
+      @media screen and (max-width: 767px) {
          margin-bottom: 164px;
       }
    }
@@ -251,7 +251,7 @@
          line-height: 1.23;
       }
 
-      @include desktop{
+      @include desktop {
          margin-bottom: 65px;
          font-size: 30px;
       }
@@ -266,7 +266,7 @@
 
       color: var(--secondary-text-color);
 
-      @include desktop{
+      @include desktop {
          font-size: 16px;
          line-height: 1.75;
       }
@@ -276,12 +276,11 @@
       margin-right: auto;
       margin-left: auto;
       display: block;
-      cursor: pointer;
       outline: none;
       border: none;
    }
-   
-   &__btn:hover{
+
+   &__btn:hover {
       color: var(--btn-hover-color);
    }
 
@@ -292,5 +291,4 @@
    &__arrow-icon {
       fill: currentColor;
    }
-
 }

@@ -1,62 +1,59 @@
-.gallery{
-    position: relative;
-    background-color: var(--primary-text-color);
-    height: 106px;
+.gallery {
+   position: relative;
+   background-color: var(--primary-text-color);
+   height: 106px;
 
-    &__img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        position: absolute;
-        top: -36px;
-        left: 50%;
-        opacity: 1;
+   &__img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      top: -36px;
+      left: 50%;
+      opacity: 1;
 
-        @media screen and (max-width: 767px){
-            width: 280px;
-            height: 130px;
-        }
+      @media screen and (max-width: 767px) {
+         width: 280px;
+         height: 130px;
+      }
 
-        @include tablet{
-            width: 704px;
-            height: 327px;
-        }
+      @include tablet {
+         width: 704px;
+         height: 327px;
+      }
 
-        @include desktop{
-            width: 1013px;
-            height: 422px;
-        }
-    }
+      @include desktop {
+         width: 1013px;
+         height: 422px;
+      }
+   }
 }
 
-.active{
-    transform: translateX(-50%);
-    border-radius: 8px;
-    // animation: slider 2000ms linear 0ms infinite direction alternate none;
+.active {
+   transform: translateX(-50%);
+   border-radius: 8px;
+   // animation: slider 2000ms linear 0ms infinite direction alternate none;
 }
 
-.active:hover{
-    animation: slider 2s linear 0ms infinite direction alternate none;
-}
+// .active:hover {
+//    animation: slider 2s linear 0ms infinite direction alternate none;
+// }
 
-// .hide-left{
-//     transform: translateX(-50%);
-//     border-radius: 8px;
+// .hide-left {
+//    transform: translateX(-250%);
 //     animation: slider 2000ms linear 2000ms infinite direction alternate none;
-    
 // }
 
 // .hide-right {
-//     transform: translateX(-50%);
-//     border-radius: 8px;
+//    transform: translateX(250%);
 //     animation: slider 2000ms linear 4000ms infinite direction alternate none;
 // }
 
-@keyframes slider{
-    0%{
-        border-radius: 0%;
-    }
-    100%{
-        border-radius: 50%;
-    }
-}
+// @keyframes slider {
+//    0% {
+//       border-radius: 0%;
+//    }
+//    100% {
+//       border-radius: 50%;
+//    }
+// }
