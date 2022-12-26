@@ -81,8 +81,9 @@
         <div class="hero__top">
           <div class="hero__title-wrap">
             <h1 class="hero__title">ice cream made with <span>passion</span></h1>
-            <button class="hero__btn transparent-btn" type="button">Products</button>
-            <a class="hero__link link" href="#">How it’s made?</a>
+            <!-- <button class="hero__btn transparent-btn" type="button">Products</button> -->
+            <a class="hero__btn transparent-btn" href="#products">Products</a>
+            <a class="hero__link link" href="#about">How it’s made?</a>
           </div>
           <div class="hero__benefits-wrap">
             <p class="hero__benefits"><span>16</span>cafes</p>
@@ -100,50 +101,52 @@
         </div>
       </section>
       <!-- section products -->
-      <section class="container products">
-        <p class="products__uptitle">100% natural</p>
-        <h2 class="products__title">products</h2>
-        <ul class="products__list">
-          <li class="products__item">
-            <h3 class="products__subtitle">ice cream</h3>
-            <p class="products__descr">
-              Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural
-              stabilizer
-            </p>
-            <button class="products__btn" data-ingredients-open>
-              <svg class="products__arrow-icon" width="40" height="14">
-                <use href="./images/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="products__item">
-            <h3 class="products__subtitle">ice coffee</h3>
-            <p class="products__descr">
-              Fragrant invigorating drink created from 100% natural ingredients without the use of
-              preservatives and flavor enhancers
-            </p>
-            <button class="products__btn">
-              <svg class="products__arrow-icon" width="40" height="14">
-                <use href="./images/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="products__item">
-            <h3 class="products__subtitle">milkshakes</h3>
-            <p class="products__descr">
-              Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries
-              and other sweets of your choice
-            </p>
-            <button class="products__btn">
-              <svg class="products__arrow-icon" width="40" height="14">
-                <use href="./images/icons.svg#icon-arrow"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
+      <section class="products" id="products">
+        <div class="container">
+          <p class="products__uptitle">100% natural</p>
+          <h2 class="products__title">products</h2>
+          <ul class="products__list">
+            <li class="products__item">
+              <h3 class="products__subtitle">ice cream</h3>
+              <p class="products__descr">
+                Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural
+                stabilizer
+              </p>
+              <button class="products__btn" data-ingredients-open>
+                <svg class="products__arrow-icon" width="40" height="14">
+                  <use href="./images/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="products__item">
+              <h3 class="products__subtitle">ice coffee</h3>
+              <p class="products__descr">
+                Fragrant invigorating drink created from 100% natural ingredients without the use of
+                preservatives and flavor enhancers
+              </p>
+              <button class="products__btn">
+                <svg class="products__arrow-icon" width="40" height="14">
+                  <use href="./images/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="products__item">
+              <h3 class="products__subtitle">milkshakes</h3>
+              <p class="products__descr">
+                Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries
+                and other sweets of your choice
+              </p>
+              <button class="products__btn">
+                <svg class="products__arrow-icon" width="40" height="14">
+                  <use href="./images/icons.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- section about -->
-      <section class="container about">
+      <section class="container about" id="about">
         <p class="about__uptitle">tradition and love</p>
         <h2 class="about__title">how it’s made?</h2>
         <picture>
@@ -187,6 +190,17 @@
           </li>
         </ul>
       </section>
+      <!-- section gallery -->
+      <section class="gallery">
+        <div class="container"><img class="gallery-img" src="./images/brooke-lark-mob.jpg" alt="ice-cream collage" width="279" height="130"></div>
+      </section>
+      <!-- section customer review -->
+      <section class="review">
+        <div class="container">
+        </div>
+      </section>
+      <!-- section contacts -->
+      <section class="container contacts"></section>
     </main>
 
     <!-- footer -->
@@ -473,6 +487,8 @@
         </p>
       </div>
     </div>
+    <!-- franchise modal -->
+    <!-- location modal -->
     <!-- script -->
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>

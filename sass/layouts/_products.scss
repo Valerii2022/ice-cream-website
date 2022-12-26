@@ -23,9 +23,9 @@
    @include desktop {
       padding-bottom: 57px;
 
-      background-image: url(../images/bg1.jpg);
+      background-image: url(../images/bg1-1920.jpg);
       @include retina {
-         background-image: url(../images/bg1@2x.jpg);
+         background-image: url(../images/bg1-1920@2x.jpg);
       }
    }
 

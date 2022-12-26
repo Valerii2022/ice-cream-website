@@ -1,0 +1,14 @@
+.gallery{
+    position: relative;
+    background-color: var(--primary-text-color);
+    height: 106px;
+
+    &__img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        top: -36px;
+        left: 0;
+    }
+}

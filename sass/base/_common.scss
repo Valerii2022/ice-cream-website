@@ -2,6 +2,7 @@ body {
    font-family: "Montserrat", sans-serif;
    color: var(--primary-text-color);
    background-color: var(--primary-background-color);
+   cursor: url('../images/cursor.svg'), auto;
 
    &.no-scroll {
       overflow: hidden;

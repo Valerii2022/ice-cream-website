@@ -266,7 +266,6 @@ img {
 
 a {
   text-decoration: none;
-  cursor: pointer;
 }
 
 ul {
@@ -301,6 +300,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
+  cursor: url("../images/cursor.svg"), auto;
 }
 body.no-scroll {
   overflow: hidden;
@@ -1203,12 +1203,12 @@ body.no-scroll {
 @media screen and (min-width: 1200px) {
   .products {
     padding-bottom: 57px;
-    background-image: url(../images/bg1.jpg);
+    background-image: url(../images/bg1-1920.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .products {
-    background-image: url(../images/bg1@2x.jpg);
+    background-image: url(../images/bg1-1920@2x.jpg);
   }
 }
 .products__uptitle {
@@ -2252,6 +2252,56 @@ body.no-scroll {
   .advantages__descr {
     font-size: 16px;
     line-height: 1.75;
+  }
+}
+
+.gallery {
+  position: relative;
+  background-color: var(--primary-text-color);
+  height: 106px;
+}
+.gallery__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -36px;
+  left: 0;
+}
+
+.review {
+  height: 1070px;
+}
+@media screen and (max-width: 767px) {
+  .review {
+    background-image: url(../images/bg2-mob.jpg);
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .review {
+    background-image: url(../images/bg2-mob@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .review {
+    padding-bottom: 82px;
+    background-image: url(../images/bg2-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .review {
+    background-image: url(../images/bg2-tab@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .review {
+    padding-bottom: 57px;
+    background-image: url(../images/bg2-1920.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .review {
+    background-image: url(../images/bg2-1920@2x.jpg);
   }
 }
 
