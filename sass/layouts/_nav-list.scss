@@ -43,12 +43,10 @@
 
       &:hover {
          color: var(--btn-color);
-         text-decoration: underline;
       }
 
       &:focus {
          color: var(--btn-hover-color);
-         text-decoration: underline;
       }
    }
 }

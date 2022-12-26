@@ -43,6 +43,11 @@
    &__burger-open {
       border: none;
       outline: none;
+      cursor: inherit;
+      // color: var(--primary-text-color);
+      color: teal;
+      transition: color var(--transition);
+
       @media screen and (min-width: 768px) and (max-width: 1199px) {
          margin-left: auto;
       }
@@ -50,6 +55,11 @@
       @include desktop {
          display: none;
       }
+   }
+
+   &__burger-open:hover .icon,
+   &__burger-open:focus .icon {
+      color: var(--btn-color);
    }
 
    &__burger-open .icon {

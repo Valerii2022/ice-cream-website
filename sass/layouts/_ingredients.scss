@@ -38,15 +38,21 @@
    }
 
    &__close-btn {
+      transition: color var(--btn-color);
       position: absolute;
       top: 8px;
       right: 8px;
-      cursor: pointer;
+      cursor: inherit;
 
       @include tablet {
          top: 24px;
          right: 24px;
       }
+   }
+
+   &__close-btn:hover,
+   &__close-btn:focus {
+      color: var(--btn-color);
    }
 
    &__close-btn .icon {

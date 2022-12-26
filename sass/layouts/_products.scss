@@ -273,19 +273,23 @@
    }
 
    &__btn {
+      transition: color var(--transition), transform var(--transition);
       margin-right: auto;
       margin-left: auto;
       display: block;
       outline: none;
       border: none;
+      cursor: inherit;
    }
 
    &__btn:hover {
       color: var(--btn-hover-color);
+      transform: scale(1.25);
    }
 
    &__btn:focus {
       color: var(--primary-text-color);
+      transform: scale(1.25);
    }
 
    &__arrow-icon {

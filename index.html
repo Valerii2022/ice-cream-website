@@ -59,12 +59,18 @@
         </button>
         <nav class="header__navigate">
           <ul class="nav-list">
-            <li class="nav-list__item"><a class="nav-list__link" href="#">Home</a></li>
             <li class="nav-list__item">
-              <a class="nav-list__link accent-link" href="#">How it’s made?</a>
+              <a class="nav-list__link" href="./index.html">Home</a>
             </li>
-            <li class="nav-list__item"><a class="nav-list__link" href="#">Our products</a></li>
-            <li class="nav-list__item"><a class="nav-list__link" href="#">Contact</a></li>
+            <li class="nav-list__item">
+              <a class="nav-list__link accent-link" href="#about">How it’s made?</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#products">Our products</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#contacts">Contact</a>
+            </li>
           </ul>
         </nav>
         <button class="header__buy-now-btn-mobile btn-arrow" type="button" data-buy-now-mobile-open>
@@ -95,9 +101,11 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et
           </p>
-          <svg class="hero__arrow" width="40" height="14">
-            <use href="./images/icons.svg#icon-arrow"></use>
-          </svg>
+          <button class="hero__arrow-btn" type="button">
+            <svg class="hero__arrow" width="40" height="14">
+              <use href="./images/icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
         </div>
       </section>
       <!-- section products -->
@@ -241,7 +249,7 @@
         <div class="container"></div>
       </section>
       <!-- section contacts -->
-      <section class="container contacts">
+      <section class="container contacts" id="contacts">
         <h2 class="contacts__title hidden">Contacts</h2>
         <ul class="contacts__list">
           <li class="contacts__item"></li>

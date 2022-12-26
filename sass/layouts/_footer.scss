@@ -126,10 +126,12 @@
       transition: color var(--transition);
       color: var(--primary-background-color);
       display: inline-block;
+      cursor: inherit;
+      outline: none;
    }
 
    &__link:hover,
-   &__focus {
+   &__link:focus {
       color: var(--primary-text-color);
    }
 
@@ -160,8 +162,16 @@
    }
 
    &__phone-link {
+      transition: color var(--transition);
       text-decoration: none;
       color: var(--primary-text-color);
+      cursor: inherit;
+      outline: none;
+   }
+
+   &__phone-link:hover,
+   &__phone-link:focus {
+      color: var(--btn-color);
    }
 
    &__bottom {

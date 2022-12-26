@@ -560,6 +560,10 @@ body.no-scroll {
 .header__burger-open {
   border: none;
   outline: none;
+  cursor: inherit;
+  color: teal;
+  -webkit-transition: color var(--transition);
+  transition: color var(--transition);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header__burger-open {
@@ -570,6 +574,9 @@ body.no-scroll {
   .header__burger-open {
     display: none;
   }
+}
+.header__burger-open:hover .icon, .header__burger-open:focus .icon {
+  color: var(--btn-color);
 }
 .header__burger-open .icon {
   fill: currentColor;
@@ -726,11 +733,9 @@ body.no-scroll {
 }
 .nav-list__link:hover {
   color: var(--btn-color);
-  text-decoration: underline;
 }
 .nav-list__link:focus {
   color: var(--btn-hover-color);
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 1199px) {
@@ -772,7 +777,7 @@ body.no-scroll {
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 118px;
-    padding-bottom: 108px;
+    padding-bottom: 100px;
     background-image: url("../images/hero-bg.jpg");
   }
 }
@@ -794,7 +799,7 @@ body.no-scroll {
 }
 @media screen and (min-width: 1200px) {
   .hero__top {
-    margin-bottom: 109px;
+    margin-bottom: 117px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -911,7 +916,7 @@ body.no-scroll {
 }
 @media screen and (min-width: 1200px) {
   .hero__bottom {
-    padding-left: 240px;
+    padding-left: 257px;
   }
 }
 .hero__text {
@@ -927,6 +932,20 @@ body.no-scroll {
     font-size: 14px;
     line-height: 1.43;
   }
+}
+.hero__arrow-btn {
+  -webkit-transition: color var(--transition), -webkit-transform var(--transition);
+  transition: color var(--transition), -webkit-transform var(--transition);
+  transition: color var(--transition), transform var(--transition);
+  transition: color var(--transition), transform var(--transition), -webkit-transform var(--transition);
+  cursor: inherit;
+  color: var(--primary-text-color);
+  padding: 0;
+}
+.hero__arrow-btn:hover, .hero__arrow-btn:focus {
+  color: var(--btn-color);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .hero__arrow {
   fill: currentColor;
@@ -969,9 +988,12 @@ body.no-scroll {
   }
 }
 .buy-now__close-btn {
+  -webkit-transition: color var(--transition);
+  transition: color var(--transition);
   position: absolute;
   top: 8px;
   right: 8px;
+  cursor: inherit;
   color: var(--secondary-text-color);
 }
 @media screen and (min-width: 768px) {
@@ -979,6 +1001,9 @@ body.no-scroll {
     top: 24px;
     right: 24px;
   }
+}
+.buy-now__close-btn:hover, .buy-now__close-btn:focus {
+  color: var(--btn-color);
 }
 .buy-now__close-btn .icon {
   fill: currentColor;
@@ -1479,17 +1504,26 @@ body.no-scroll {
   }
 }
 .products__btn {
+  -webkit-transition: color var(--transition), -webkit-transform var(--transition);
+  transition: color var(--transition), -webkit-transform var(--transition);
+  transition: color var(--transition), transform var(--transition);
+  transition: color var(--transition), transform var(--transition), -webkit-transform var(--transition);
   margin-right: auto;
   margin-left: auto;
   display: block;
   outline: none;
   border: none;
+  cursor: inherit;
 }
 .products__btn:hover {
   color: var(--btn-hover-color);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .products__btn:focus {
   color: var(--primary-text-color);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .products__arrow-icon {
   fill: currentColor;
@@ -1537,16 +1571,21 @@ body.no-scroll {
   }
 }
 .ingredients__close-btn {
+  -webkit-transition: color var(--btn-color);
+  transition: color var(--btn-color);
   position: absolute;
   top: 8px;
   right: 8px;
-  cursor: pointer;
+  cursor: inherit;
 }
 @media screen and (min-width: 768px) {
   .ingredients__close-btn {
     top: 24px;
     right: 24px;
   }
+}
+.ingredients__close-btn:hover, .ingredients__close-btn:focus {
+  color: var(--btn-color);
 }
 .ingredients__close-btn .icon {
   fill: currentColor;
@@ -1918,6 +1957,7 @@ body.no-scroll {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background-size: contain;
+  background-repeat: no-repeat;
   background-image: url("../images/cow-mob.png");
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -2057,15 +2097,21 @@ body.no-scroll {
   }
 }
 .read-more__close-btn {
+  -webkit-transition: color var(--transition);
+  transition: color var(--transition);
   position: absolute;
   top: 8px;
   right: 8px;
+  cursor: inherit;
 }
 @media screen and (min-width: 768px) {
   .read-more__close-btn {
     top: 24px;
     right: 24px;
   }
+}
+.read-more__close-btn:hover, .read-more__close-btn:focus {
+  color: var(--btn-color);
 }
 .read-more__close-btn .icon {
   fill: currentColor;
@@ -2467,8 +2513,10 @@ body.no-scroll {
   transition: color var(--transition);
   color: var(--primary-background-color);
   display: inline-block;
+  cursor: inherit;
+  outline: none;
 }
-.footer__link:hover, .footer__focus {
+.footer__link:hover, .footer__link:focus {
   color: var(--primary-text-color);
 }
 .footer__icon {
@@ -2497,8 +2545,15 @@ body.no-scroll {
   }
 }
 .footer__phone-link {
+  -webkit-transition: color var(--transition);
+  transition: color var(--transition);
   text-decoration: none;
   color: var(--primary-text-color);
+  cursor: inherit;
+  outline: none;
+}
+.footer__phone-link:hover, .footer__phone-link:focus {
+  color: var(--btn-color);
 }
 .footer__bottom {
   border-top: 1px solid #e1e1e1;

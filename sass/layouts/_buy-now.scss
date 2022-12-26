@@ -33,9 +33,11 @@
    }
 
    &__close-btn {
+      transition: color var(--transition);
       position: absolute;
       top: 8px;
       right: 8px;
+      cursor: inherit;
 
       color: var(--secondary-text-color);
 
@@ -43,6 +45,11 @@
          top: 24px;
          right: 24px;
       }
+   }
+
+   &__close-btn:hover,
+   &__close-btn:focus {
+      color: var(--btn-color);
    }
 
    &__close-btn .icon {
