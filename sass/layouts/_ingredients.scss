@@ -115,9 +115,6 @@
       }
    }
 
-   &__property-item {
-   }
-
    &__property {
       display: flex;
       flex-direction: column;
@@ -188,12 +185,6 @@
 
    &__ingr-item:not(:last-child) {
       margin-bottom: 11px;
-   }
-
-   &__ingredient {
-   }
-
-   &__amount {
    }
 
    &__bottom {
