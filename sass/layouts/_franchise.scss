@@ -1,0 +1,147 @@
+.franchise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    z-index: 2000;
+    background-color: rgba(132, 161, 120, 0.7);
+
+    &__modal {
+        border: 2px solid var(--btn-color);
+        border-radius: 10px;
+        position: absolute;
+
+        background: var(--primary-text-color);
+
+        @media screen and (max-width: 767px) {
+            margin-top: 10px;
+            max-width: 280px;
+            padding: 28px;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+
+        @include tablet {
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            max-width: 568px;
+            padding: 32px 54px;
+        }
+    }
+
+    &__close-btn {
+        transition: color var(--transition);
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        cursor: inherit;
+
+        color: var(--secondary-text-color);
+
+        @include tablet {
+            top: 24px;
+            right: 24px;
+        }
+    }
+
+    &__close-btn:hover,
+    &__close-btn:focus {
+        color: var(--btn-color);
+    }
+
+    &__close-btn .icon {
+        fill: currentColor;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-family: var(--seymoure);
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+
+        color: var(--secondary-text-color);
+
+        @include tablet {
+            margin-bottom: 40px;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+    }
+
+    &__descr{
+        margin-bottom: 24px;
+
+        font-size: 14px;
+        line-height: 1.43;
+        
+        color: var(--secondary-text-color);
+    }
+
+    &__form {
+        text-align: center;
+    }
+
+    &__input {
+        width: 224px;
+        margin-bottom: 12px;
+        padding: 8px 12px;
+        background: rgba(248, 210, 78, 0.1);
+        border: 1px solid #84a178;
+        border-radius: 10px;
+
+        @include tablet {
+            width: 368px;
+            padding: 11px 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__textarea {
+        width: 224px;
+        height: 65px;
+        padding: 8px 12px;
+        margin-bottom: 24px;
+        resize: none;
+        background: rgba(248, 210, 78, 0.1);
+        border: 1px solid #84a178;
+        border-radius: 10px;
+
+        @include tablet {
+            width: 368px;
+            height: 84px;
+            padding: 11px 16px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__input::placeholder,
+    &__textarea::placeholder {
+        font-size: 12px;
+        line-height: 1.42;
+
+        color: var(--secondary-text-color);
+
+        @include tablet {
+            font-size: 14px;
+            line-height: 1.43;
+        }
+    }
+
+    &__input:not(:focus):not(:placeholder-shown):invalid {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+
+    &__input:not(:focus):not(:placeholder-shown):valid {
+        background-color: rgba(0, 255, 0, 0.5);
+    }
+
+    &__form-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

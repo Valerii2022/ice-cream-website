@@ -2,8 +2,8 @@
    transition: color var(--transition), background-color var(--transition);
    padding-top: 12px;
    padding-bottom: 12px;
-   padding-left: 34px;
-   padding-right: 34px;
+   // padding-left: 34px;
+   // padding-right: 34px;
    border-radius: 10px;
    outline: none;
    cursor: inherit;
@@ -11,7 +11,7 @@
    @include font(600, 14px, 1.21, null);
    display: flex;
    align-items: center;
-   text-align: center;
+   justify-content: center;
 
    color: var(--secondary-text-color);
    background: var(--btn-color);

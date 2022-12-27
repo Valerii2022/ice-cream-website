@@ -335,8 +335,8 @@
           </li>
         </ul>
         <div class="contacts__bottom">
-          <button class="contacts__btn btn-arrow" type="button">Our Locations</button>
-          <button class="contacts__btn btn-transparent-arrow" type="button">Franchise</button>
+          <button class="contacts__btn btn-arrow" type="button" data-locations-open>Our Locations</button>
+          <button class="contacts__btn btn-transparent-arrow" type="button" data-franchise-open>Franchise</button>
         </div>
       </section>
     </main>
@@ -626,12 +626,54 @@
       </div>
     </div>
     <!-- franchise modal -->
+    <div class="franchise is-hidden" data-franchise>
+      <div class="franchise__modal">
+        <button class="franchise__close-btn" type="button" data-franchise-close>
+          <svg class="icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="franchise__title">Thank you for your interest in owning an Ice Cream shop</h2>
+        <p class="franchise__descr">Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once
+        the application process resumes, we will contact you for further information. Please fill out the contact information
+        below and we will reach out for additional information. We appreciate your patience.</p>
+        <form action="#" class="franchise__form">
+          <label>
+            <input class="franchise__input" type="text" name="franchise-name" placeholder="Name" minlength="3" required />
+          </label>
+          <label>
+            <input class="franchise__input" type="tel" name="franchise-phone" placeholder="Phone"
+              pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="+38 (096) 111-11-11" required />
+          </label>
+          <label>
+            <input class="franchise__input" type="email" name="franchise-mail" placeholder="Email" required />
+          </label>
+          <label for="textarea"></label>
+          <textarea class="franchise__textarea" name="feedback" placeholder="Comment" id="textarea"></textarea>
+          <button class="buy-now__form-btn button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
     <!-- location modal -->
+    <div class="locations is-hidden" data-locations>
+      <div class="locations__modal">
+        <button class="locations__close-btn" type="button" data-locations-close>
+          <svg class="icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="locations__title">Our Locations</h2>
+        <img class="locations__img"  src="./images/map-mob.jpg" alt="map" width="224">
+        <a class="locations__btn button" href="https://goo.gl/maps/uw7CDV6oJHBKNFGW9" target="_blank" rel="noopener noreferrer">Open map</a>
+      </div>
+    </div>
     <!-- scripts -->
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/modal-mobile.js"></script>
     <script src="./js/ingredients.js"></script>
     <script src="./js/read-more.js"></script>
+    <script src="./js/locations.js"></script>
+    <script src="./js/franchise.js"></script>
   </body>
 </html>
