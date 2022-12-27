@@ -62,7 +62,7 @@
         <nav class="header__navigate">
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a class="nav-list__link" href="./index.html">Home</a>
+              <a class="nav-list__link" href="#home">Home</a>
             </li>
             <li class="nav-list__item">
               <a class="nav-list__link accent-link" href="#about">How it’s made?</a>
@@ -85,7 +85,7 @@
     <!-- main -->
     <main>
       <!-- section hero-->
-      <section class="container hero">
+      <section class="container hero" id="home">
         <div class="hero__top">
           <div class="hero__title-wrap">
             <h1 class="hero__title">ice cream made with <span>passion</span></h1>
@@ -250,7 +250,61 @@
       </section>
       <!-- section customer review -->
       <section class="review">
-        <div class="container"></div>
+        <div class="container">
+          <ul class="review__list">
+            <li class="review__item">
+              <picture>
+                <source srcset="./images/emily.png 1x, ./images/emily@2x.png 2x" />
+                <img
+                  class="review__img"
+                  src="./images/emily.png"
+                  alt="client photo"
+                  width="85"
+                  height="85"
+                />
+              </picture>
+              <p class="review__feedback">
+                I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles!
+                In addition, you have beautiful serving, cozy atmosphere and polite staff.
+              </p>
+              <p class="review__clients-name">Emily, Los Angeles</p>
+            </li>
+            <li class="review__item">
+              <picture>
+                <source srcset="./images/diana.png 1x, ./images/diana@2x.png 2x" />
+                <img
+                  class="review__img"
+                  src="./images/diana.png"
+                  alt="client photo"
+                  width="85"
+                  height="85"
+                />
+              </picture>
+              <p class="review__feedback">
+                Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like
+                the excellent service - always served politely and quickly!
+              </p>
+              <p class="review__clients-name">Diana, Chicago</p>
+            </li>
+            <li class="review__item">
+              <picture>
+                <source srcset="./images/sam.png 1x, ./images/sam@2x.png 2x" />
+                <img
+                  class="review__img"
+                  src="./images/sam.png"
+                  alt="client photo"
+                  width="85"
+                  height="85"
+                />
+              </picture>
+              <p class="review__feedback">
+                Every day we come to you with friends after classes in college. We love your ice
+                cream and casual atmosphere!
+              </p>
+              <p class="review__clients-name">Bryan, New-York</p>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- section contacts -->
       <section class="container contacts" id="contacts">

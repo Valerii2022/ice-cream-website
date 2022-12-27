@@ -1,5 +1,6 @@
 .review {
-   height: 1070px;
+   padding-top: 80px;
+   padding-bottom: 393px;
    background-repeat: no-repeat;
    background-size: cover;
 
@@ -12,7 +13,8 @@
    }
 
    @include tablet {
-      padding-bottom: 82px;
+      padding-top: 255px;
+      padding-bottom: 379px;
       background-image: url(../images/bg2-tab.jpg);
 
       @include retina {
@@ -21,12 +23,59 @@
    }
 
    @include desktop {
-      padding-bottom: 57px;
+      padding-top: 436px;
+      padding-bottom: 228px;
 
       background-image: url(../images/bg2-1920.jpg);
 
       @include retina {
          background-image: url(../images/bg2-1920@2x.jpg);
+      }
+   }
+
+   &-list {
+   }
+   &__item {
+   }
+   &__img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 32px;
+   }
+   &__feedback {
+      padding: 35px 39px;
+      margin-bottom: 32px;
+      font-size: 12px;
+      line-height: 2.58;
+      text-align: center;
+
+      background: var(--primary-background-color);
+      border-radius: 10px;
+
+      @include tablet {
+         padding: 28px 80px;
+         font-size: 14px;
+         line-height: 1.86;
+      }
+
+      @include desktop {
+         padding: 42px 74px;
+         font-size: 16px;
+         line-height: 1.88;
+      }
+   }
+   &__clients-name {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.85;
+      text-align: center;
+
+      color: var(--secondary-text-color);
+
+      @include tablet {
+         font-size: 16px;
+         line-height: 1.88;
       }
    }
 }

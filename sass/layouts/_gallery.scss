@@ -1,6 +1,6 @@
 .gallery {
    position: relative;
-   background-color: var(--primary-text-color);
+   background-color: var(--white-color);
    height: 98px;
 
    @include tablet {
@@ -12,6 +12,7 @@
    // }
 
    &__img-thumb {
+      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
       position: relative;
       width: 280px;
       height: 130px;

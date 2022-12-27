@@ -2375,7 +2375,7 @@ body.no-scroll {
 
 .gallery {
   position: relative;
-  background-color: var(--primary-text-color);
+  background-color: var(--white-color);
   height: 98px;
 }
 @media screen and (min-width: 768px) {
@@ -2384,6 +2384,8 @@ body.no-scroll {
   }
 }
 .gallery__img-thumb {
+  -webkit-box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+          box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   position: relative;
   width: 280px;
   height: 130px;
@@ -2669,7 +2671,8 @@ body.no-scroll {
   }
 }
 .review {
-  height: 1070px;
+  padding-top: 80px;
+  padding-bottom: 393px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2685,7 +2688,8 @@ body.no-scroll {
 }
 @media screen and (min-width: 768px) {
   .review {
-    padding-bottom: 82px;
+    padding-top: 255px;
+    padding-bottom: 379px;
     background-image: url(../images/bg2-tab.jpg);
   }
 }
@@ -2696,13 +2700,56 @@ body.no-scroll {
 }
 @media screen and (min-width: 1200px) {
   .review {
-    padding-bottom: 57px;
+    padding-top: 436px;
+    padding-bottom: 228px;
     background-image: url(../images/bg2-1920.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .review {
     background-image: url(../images/bg2-1920@2x.jpg);
+  }
+}
+.review__img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 32px;
+}
+.review__feedback {
+  padding: 35px 39px;
+  margin-bottom: 32px;
+  font-size: 12px;
+  line-height: 2.58;
+  text-align: center;
+  background: var(--primary-background-color);
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .review__feedback {
+    padding: 28px 80px;
+    font-size: 14px;
+    line-height: 1.86;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .review__feedback {
+    padding: 42px 74px;
+    font-size: 16px;
+    line-height: 1.88;
+  }
+}
+.review__clients-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.85;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+@media screen and (min-width: 768px) {
+  .review__clients-name {
+    font-size: 16px;
+    line-height: 1.88;
   }
 }
 
