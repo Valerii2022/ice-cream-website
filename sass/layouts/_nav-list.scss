@@ -1,4 +1,5 @@
 .nav-list {
+   scroll-behavior: smooth;
    @include desktop {
       display: flex;
       gap: 27px;

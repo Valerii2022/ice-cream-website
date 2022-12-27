@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logo.png" sizes="16x16" type="image/png" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <title>Ice cream</title>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
@@ -87,7 +89,6 @@
         <div class="hero__top">
           <div class="hero__title-wrap">
             <h1 class="hero__title">ice cream made with <span>passion</span></h1>
-            <!-- <button class="hero__btn transparent-btn" type="button">Products</button> -->
             <a class="hero__btn transparent-btn" href="#products">Products</a>
             <a class="hero__link link" href="#about">How it’s made?</a>
           </div>
@@ -201,7 +202,8 @@
       <!-- section gallery -->
       <section class="gallery">
         <div class="container">
-          <!-- <picture>
+          <h2 class="gallery__title hidden">Gallery</h2>
+          <picture>
             <source
               srcset="./images/brooke-lark2.jpg 1x, ./images/brooke-lark2@2x.jpg 2x"
               media="(min-width: 1200px)"
@@ -211,7 +213,7 @@
               src="./images/brooke-lark2.jpg"
               alt="ice-cream collage"
             />
-          </picture> -->
+          </picture>
           <picture>
             <source
               srcset="./images/brooke-lark.jpg 1x, ./images/brooke-lark@2x.jpg 2x"
@@ -231,7 +233,7 @@
               alt="ice-cream collage"
             />
           </picture>
-          <!-- <picture>
+          <picture>
             <source
               srcset="./images/brooke-lark3.jpg 1x, ./images/brooke-lark3@2x.jpg 2x"
               media="(min-width: 1200px)"
@@ -241,7 +243,7 @@
               src="./images/brooke-lark3.jpg"
               alt="ice-cream collage"
             />
-          </picture> -->
+          </picture>
         </div>
       </section>
       <!-- section customer review -->
@@ -258,7 +260,9 @@
               <li class="company__item">
                 <address class="company__address">
                   <p class="company__address-title">Chicago</p>
-                  <p class="company__address-text">10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA</p>
+                  <p class="company__address-text">
+                    10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA
+                  </p>
                 </address>
               </li>
               <li class="company__item">
@@ -285,7 +289,9 @@
               <li class="company__item">
                 <address class="company__address">
                   <p class="company__address-title">Los Angeles</p>
-                  <p class="company__address-text">1003 Manhattan Ave, Manhattan Beach, CA 90263, USA</p>
+                  <p class="company__address-text">
+                    1003 Manhattan Ave, Manhattan Beach, CA 90263, USA
+                  </p>
                 </address>
               </li>
               <li class="company__item">
@@ -335,8 +341,12 @@
           </li>
         </ul>
         <div class="contacts__bottom">
-          <button class="contacts__btn btn-arrow" type="button" data-locations-open>Our Locations</button>
-          <button class="contacts__btn btn-transparent-arrow" type="button" data-franchise-open>Franchise</button>
+          <button class="contacts__btn btn-arrow" type="button" data-locations-open>
+            Our Locations
+          </button>
+          <button class="contacts__btn btn-transparent-arrow" type="button" data-franchise-open>
+            Franchise
+          </button>
         </div>
       </section>
     </main>
@@ -634,23 +644,51 @@
           </svg>
         </button>
         <h2 class="franchise__title">Thank you for your interest in owning an Ice Cream shop</h2>
-        <p class="franchise__descr">Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once
-        the application process resumes, we will contact you for further information. Please fill out the contact information
-        below and we will reach out for additional information. We appreciate your patience.</p>
+        <p class="franchise__descr">
+          Due to the overwhelming volume of franchise requests we are not accepting new franchisee
+          applications at this time. Once the application process resumes, we will contact you for
+          further information. Please fill out the contact information below and we will reach out
+          for additional information. We appreciate your patience.
+        </p>
         <form action="#" class="franchise__form">
           <label>
-            <input class="franchise__input" type="text" name="franchise-name" placeholder="Name" minlength="3" required />
+            <input
+              class="franchise__input"
+              type="text"
+              name="franchise-name"
+              placeholder="Name"
+              minlength="3"
+              required
+            />
           </label>
           <label>
-            <input class="franchise__input" type="tel" name="franchise-phone" placeholder="Phone"
-              pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="+38 (096) 111-11-11" required />
+            <input
+              class="franchise__input"
+              type="tel"
+              name="franchise-phone"
+              placeholder="Phone"
+              pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              title="+38 (096) 111-11-11"
+              required
+            />
           </label>
           <label>
-            <input class="franchise__input" type="email" name="franchise-mail" placeholder="Email" required />
+            <input
+              class="franchise__input"
+              type="email"
+              name="franchise-mail"
+              placeholder="Email"
+              required
+            />
           </label>
           <label for="textarea"></label>
-          <textarea class="franchise__textarea" name="feedback" placeholder="Comment" id="textarea"></textarea>
-          <button class="buy-now__form-btn button" type="submit">Submit</button>
+          <textarea
+            class="franchise__textarea"
+            name="feedback"
+            placeholder="Comment"
+            id="textarea"
+          ></textarea>
+          <button class="franchise__btn button" type="submit">Submit</button>
         </form>
       </div>
     </div>
@@ -663,8 +701,21 @@
           </svg>
         </button>
         <h2 class="locations__title">Our Locations</h2>
-        <img class="locations__img"  src="./images/map-mob.jpg" alt="map" width="224">
-        <a class="locations__btn button" href="https://goo.gl/maps/uw7CDV6oJHBKNFGW9" target="_blank" rel="noopener noreferrer">Open map</a>
+        <picture>
+          <source srcset="./images/map.jpg 1x, ./images/map@2x.jpg 2x" media="(min-width:768px)" />
+          <source
+            srcset="./images/map-mob.jpg 1x, ./images/map-mob@2x.jpg 2x"
+            media="(max-width:767px)"
+          />
+          <img class="locations__img" src="./images/map.jpg" alt="map" />
+        </picture>
+        <a
+          class="locations__btn button"
+          href="https://goo.gl/maps/uw7CDV6oJHBKNFGW9"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open map</a
+        >
       </div>
     </div>
     <!-- scripts -->

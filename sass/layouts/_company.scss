@@ -1,134 +1,134 @@
 .company {
-    &__title {
-        display: inline-block;
-        padding: 4px 22px;
-        @include font (500, 12px, 1.17, 0.04em);
-        
-        color: var(--secondary-text-color);
-        background: var(--btn-color);
-        border-radius: 4px;
+   &__title {
+      display: inline-block;
+      padding: 4px 22px;
+      @include font(500, 12px, 1.17, 0.04em);
 
-        @include tablet{
-            font-size: 16px;
-            line-height: 1.38;
-        }
-    }
-    
-    &__list {}
-    
-    &__item {
-        padding-top: 24px;
-        padding-bottom: 24px;
+      color: var(--secondary-text-color);
+      background: var(--btn-color);
+      border-radius: 4px;
 
-        @include tablet{
-            padding-top: 32px;
-            padding-bottom: 32px;
-        }
-    }
+      @include tablet {
+         font-size: 16px;
+         line-height: 1.38;
+      }
+   }
 
-    &__item:first-child{
-        @media screen and (max-width: 767px){
-            padding-top: 20px;
-        }
-    }
+   &__item {
+      padding-top: 24px;
+      padding-bottom: 24px;
 
-    &__item:not(:last-child){
-        border-bottom: 1px solid #E1E1E1;
-    }
-    
-    &__address {
-        font-style: normal;
-        @include font (500, 12px, 1.83, 0.04em);
+      @include tablet {
+         padding-top: 32px;
+         padding-bottom: 32px;
+      }
+   }
 
-        @include tablet{
-            font-size: 14px;
-            line-height: 1.86;
-        }
+   &__item:first-child {
+      @media screen and (max-width: 767px) {
+         padding-top: 20px;
+      }
+   }
 
-        @include desktop{
-            font-size: 16px;
-            line-height: 1.81;
-        }
-    }
-    
-    &__address-title {
-        margin-bottom: 8px;
-        
-        color: var(--secondary-text-color);
+   &__item:not(:last-child) {
+      border-bottom: 1px solid #e1e1e1;
+   }
 
-        @media screen and (min-width: 768px) and (max-width: 1199px){
-            margin-bottom: 12px;
-        }
-    }
-    
-    &__address-text {        
-        color: #D6936D;
-    }
-    
-    &__hours-list {}
-    
-    &__working-hrs {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.83;
+   &__address {
+      font-style: normal;
+      @include font(500, 12px, 1.83, 0.04em);
 
-        @include tablet{
-            font-size: 14px;
-            line-height: 1.86;
-        }
+      @include tablet {
+         font-size: 14px;
+         line-height: 1.86;
+      }
 
-        @include desktop{
-            font-size: 16px;
-            line-height: 1.88;
-        }
-    }
+      @include desktop {
+         font-size: 16px;
+         line-height: 1.81;
+      }
+   }
 
-    &__working-hrs:first-child{
-        margin-bottom: 8px;
+   &__address-title {
+      margin-bottom: 8px;
 
-        @include desktop{
-            margin-bottom: 12px;
-        }
-    }
-    
-    &__hrs-property {
-        color: var(--secondary-text-color);
-    }
-    
-    &__hrs-value {
-        color: #ABABAB;
-    }
-    
-    &__link {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.58;
-        cursor: inherit;
-        outline: none;
-        transition: color var(--transition);
-        
-        color: var(--secondary-text-color);
+      color: var(--secondary-text-color);
 
-        @include tablet{
-            font-size: 14px;
-            line-height: 1.5;
-        }
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+         margin-bottom: 12px;
+      }
+   }
 
-        @include desktop{
-            font-style: 16px;
-        }
-    }
+   &__address-text {
+      color: #d6936d;
+   }
 
-    &__link:first-child{
-        margin-bottom: 6px;
+   &__hours-list {
+   }
 
-        @include tablet{
-            margin-bottom: 4px;
-        }
-    }
+   &__working-hrs {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.83;
 
-    &__link:hover,
-    &__link:focus{
-        color: var(--btn-color);
-    }
+      @include tablet {
+         font-size: 14px;
+         line-height: 1.86;
+      }
+
+      @include desktop {
+         font-size: 16px;
+         line-height: 1.88;
+      }
+   }
+
+   &__working-hrs:first-child {
+      margin-bottom: 8px;
+
+      @include desktop {
+         margin-bottom: 12px;
+      }
+   }
+
+   &__hrs-property {
+      color: var(--secondary-text-color);
+   }
+
+   &__hrs-value {
+      color: #ababab;
+   }
+
+   &__link {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.58;
+      cursor: inherit;
+      outline: none;
+      display: block;
+      transition: color var(--transition);
+
+      color: var(--secondary-text-color);
+
+      @include tablet {
+         font-size: 14px;
+         line-height: 1.5;
+      }
+
+      @include desktop {
+         font-style: 16px;
+      }
+   }
+
+   &__link:first-child {
+      margin-bottom: 6px;
+
+      @include tablet {
+         margin-bottom: 4px;
+      }
+   }
+
+   &__link:hover,
+   &__link:focus {
+      color: var(--btn-color);
+   }
 }

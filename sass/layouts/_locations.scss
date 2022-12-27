@@ -1,79 +1,87 @@
 .locations {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    z-index: 2000;
-    background-color: rgba(132, 161, 120, 0.7);
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   overflow: auto;
+   z-index: 2000;
+   background-color: rgba(132, 161, 120, 0.7);
 
-    &__modal {
-        border: 2px solid var(--btn-color);
-        border-radius: 10px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+   &__modal {
+      border: 2px solid var(--btn-color);
+      border-radius: 10px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
 
-        background: var(--primary-text-color);
-        color: var(--secondary-text-color);
+      background: var(--primary-text-color);
+      color: var(--secondary-text-color);
 
-        @media screen and (max-width: 767px) {
-            width: 280px;
-            padding: 26px;
-        }
+      @media screen and (max-width: 767px) {
+         width: 280px;
+         padding: 26px;
+      }
 
-        @include tablet {
-            width: 568px;
-            padding: 30px 58px;
-        }
-    }
+      @include tablet {
+         width: 568px;
+         padding: 30px 58px;
+      }
+   }
 
-    &__close-btn {
-        transition: color var(--transition);
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        cursor: inherit;
+   &__close-btn {
+      transition: color var(--transition);
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      cursor: inherit;
 
-        @include tablet {
-            top: 24px;
-            right: 24px;
-        }
-    }
+      @include tablet {
+         top: 24px;
+         right: 24px;
+      }
+   }
 
-    &__close-btn:hover,
-    &__close-btn:focus {
-        color: var(--btn-color);
-    }
+   &__close-btn:hover,
+   &__close-btn:focus {
+      color: var(--btn-color);
+   }
 
-    &__close-btn .icon {
-        fill: currentColor;
-    }
+   &__close-btn .icon {
+      fill: currentColor;
+   }
 
-    &__title {
-        margin-bottom: 20px;
+   &__title {
+      margin-bottom: 20px;
 
-        font-family: var(--seymoure);
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: center;
+      font-family: var(--seymoure);
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
 
-        @include tablet {
-            margin-bottom: 32px;
-            font-size: 20px;
-            line-height: 1.4;
-        }
-    }
+      @include tablet {
+         margin-bottom: 32px;
+         font-size: 20px;
+         line-height: 1.4;
+      }
+   }
 
-    &__img{
-        margin-bottom: 24px;
-    }
+   &__img {
+      margin-bottom: 24px;
 
-    &__btn {
-        width: 134px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+      @include tablet {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__btn {
+      width: 134px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include tablet {
+         width: 145px;
+      }
+   }
 }

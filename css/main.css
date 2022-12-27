@@ -736,6 +736,9 @@ body.no-scroll {
   }
 }
 
+.nav-list {
+  scroll-behavior: smooth;
+}
 @media screen and (min-width: 1200px) {
   .nav-list {
     display: -webkit-box;
@@ -955,12 +958,20 @@ body.no-scroll {
   }
 }
 .hero__btn {
-  margin-right: 8px;
+  margin-right: 12px;
+  padding: 10px 25px;
+  font-size: 12px;
+  line-height: 1.25;
 }
 @media screen and (min-width: 1200px) {
   .hero__btn {
     margin-right: 34px;
+    padding: 11px 33px;
   }
+}
+.hero__link {
+  font-size: 12px;
+  line-height: 1.25;
 }
 .hero__bottom {
   padding-left: 180px;
@@ -1899,8 +1910,14 @@ body.no-scroll {
   background-color: rgba(0, 255, 0, 0.5);
 }
 .ingredients__form-btn {
+  width: 132px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .ingredients__form-btn {
+    width: 121px;
+  }
 }
 
 .about {
@@ -2366,6 +2383,7 @@ body.no-scroll {
   margin-left: auto;
   margin-right: auto;
   position: absolute;
+  border-radius: 18px;
   top: -36px;
   left: 50%;
   opacity: 1;
@@ -2380,19 +2398,30 @@ body.no-scroll {
   .gallery__img {
     width: 704px;
     height: 327px;
+    top: -144%;
   }
 }
 @media screen and (min-width: 1200px) {
   .gallery__img {
     width: 1013px;
     height: 422px;
+    top: -98%;
   }
 }
 
 .active {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  border-radius: 8px;
+}
+
+.hide-left {
+  -webkit-transform: translateX(-155%);
+          transform: translateX(-155%);
+}
+
+.hide-right {
+  -webkit-transform: translateX(55%);
+          transform: translateX(55%);
 }
 
 .review {
@@ -2562,7 +2591,7 @@ body.no-scroll {
   }
 }
 .company__item:not(:last-child) {
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
 }
 .company__address {
   font-style: normal;
@@ -2593,7 +2622,7 @@ body.no-scroll {
   }
 }
 .company__address-text {
-  color: #D6936D;
+  color: #d6936d;
 }
 .company__working-hrs {
   font-weight: 500;
@@ -2624,7 +2653,7 @@ body.no-scroll {
   color: var(--secondary-text-color);
 }
 .company__hrs-value {
-  color: #ABABAB;
+  color: #ababab;
 }
 .company__link {
   font-weight: 500;
@@ -2632,6 +2661,7 @@ body.no-scroll {
   line-height: 1.58;
   cursor: inherit;
   outline: none;
+  display: block;
   -webkit-transition: color var(--transition);
   transition: color var(--transition);
   color: var(--secondary-text-color);
@@ -2679,7 +2709,7 @@ body.no-scroll {
   .franchise__modal {
     margin-top: 10px;
     max-width: 280px;
-    padding: 28px;
+    padding: 26px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     left: 50%;
@@ -2691,8 +2721,8 @@ body.no-scroll {
             transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    max-width: 568px;
-    padding: 32px 54px;
+    width: 568px;
+    padding: 30px 58px;
   }
 }
 .franchise__close-btn {
@@ -2726,7 +2756,10 @@ body.no-scroll {
 }
 @media screen and (min-width: 768px) {
   .franchise__title {
-    margin-bottom: 40px;
+    max-width: 322px;
+    margin-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 20px;
     line-height: 1.4;
   }
@@ -2737,13 +2770,20 @@ body.no-scroll {
   line-height: 1.43;
   color: var(--secondary-text-color);
 }
+@media screen and (min-width: 768px) {
+  .franchise__descr {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.38;
+  }
+}
 .franchise__form {
   text-align: center;
 }
 .franchise__input {
   width: 224px;
   margin-bottom: 12px;
-  padding: 8px 12px;
+  padding: 6px 12px;
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
   border-radius: 10px;
@@ -2838,9 +2878,15 @@ body.no-scroll {
 .franchise__input:not(:focus):not(:placeholder-shown):valid {
   background-color: rgba(0, 255, 0, 0.5);
 }
-.franchise__form-btn {
+.franchise__btn {
+  width: 114px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .franchise__btn {
+    width: 121px;
+  }
 }
 
 .locations {
@@ -2913,10 +2959,20 @@ body.no-scroll {
 .locations__img {
   margin-bottom: 24px;
 }
+@media screen and (min-width: 768px) {
+  .locations__img {
+    margin-bottom: 32px;
+  }
+}
 .locations__btn {
   width: 134px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .locations__btn {
+    width: 145px;
+  }
 }
 
 .footer {

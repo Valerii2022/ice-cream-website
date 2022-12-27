@@ -100,7 +100,8 @@
    color: var(--secondary-text-color);
    background: transparent;
 
-   @include desktop {}
+   @include desktop {
+   }
 
    &::after {
       content: "";
@@ -169,7 +170,6 @@
       border: 2px solid var(--btn-disabled-color);
    }
 }
-
 
 .link {
    transition: color var(--transition);

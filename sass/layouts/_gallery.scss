@@ -8,9 +8,12 @@
       margin-left: auto;
       margin-right: auto;
       position: absolute;
+      border-radius: 18px;
       top: -36px;
       left: 50%;
+      // transform: translateX(-50%);
       opacity: 1;
+      // overflow: hidden;
 
       @media screen and (max-width: 767px) {
          width: 280px;
@@ -20,18 +23,19 @@
       @include tablet {
          width: 704px;
          height: 327px;
+         top: -144%;
       }
 
       @include desktop {
          width: 1013px;
          height: 422px;
+         top: -98%;
       }
    }
 }
 
 .active {
    transform: translateX(-50%);
-   border-radius: 8px;
    // animation: slider 2000ms linear 0ms infinite direction alternate none;
 }
 
@@ -39,15 +43,15 @@
 //    animation: slider 2s linear 0ms infinite direction alternate none;
 // }
 
-// .hide-left {
-//    transform: translateX(-250%);
-//     animation: slider 2000ms linear 2000ms infinite direction alternate none;
-// }
+.hide-left {
+   transform: translateX(-155%);
+   // animation: slider 2000ms linear 2000ms infinite direction alternate none;
+}
 
-// .hide-right {
-//    transform: translateX(250%);
-//     animation: slider 2000ms linear 4000ms infinite direction alternate none;
-// }
+.hide-right {
+   transform: translateX(55%);
+   // animation: slider 2000ms linear 4000ms infinite direction alternate none;
+}
 
 // @keyframes slider {
 //    0% {

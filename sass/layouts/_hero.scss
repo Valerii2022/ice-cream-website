@@ -139,11 +139,21 @@
    }
 
    &__btn {
-      margin-right: 8px;
+      margin-right: 12px;
+      padding: 10px 25px;
+
+      font-size: 12px;
+      line-height: 1.25;
 
       @include desktop {
          margin-right: 34px;
+         padding: 11px 33px;
       }
+   }
+
+   &__link {
+      font-size: 12px;
+      line-height: 1.25;
    }
 
    &__bottom {
