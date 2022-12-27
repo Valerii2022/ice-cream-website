@@ -617,7 +617,6 @@ body.no-scroll {
   border: none;
   outline: none;
   cursor: inherit;
-  color: teal;
   -webkit-transition: color var(--transition);
   transition: color var(--transition);
 }
