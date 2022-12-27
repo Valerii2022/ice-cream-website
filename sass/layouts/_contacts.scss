@@ -8,13 +8,22 @@
         padding-bottom: 40px;
     }
 
+    @include desktop{
+        margin-top: -128px;
+        padding-bottom: 120px;
+    }
+
     &__list {
         margin-bottom: 20px;
 
         @include tablet{
-            margin-bottom: 40px;
+            margin-bottom: 34px;
             display: flex;
             gap: 16px;
+        }
+
+        @include desktop{
+            margin-bottom: 60px;
         }
     }
     
@@ -34,10 +43,18 @@
 
         @include tablet{
             width: calc((100% - 32px) / 3);
+            padding-top: 34px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 14px;
         }
 
         @include desktop{
             width: calc((100% - 64px) / 3);
+            padding-top: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 8px;
         }
     }
 

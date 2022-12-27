@@ -7,6 +7,11 @@
         color: var(--secondary-text-color);
         background: var(--btn-color);
         border-radius: 4px;
+
+        @include tablet{
+            font-size: 16px;
+            line-height: 1.38;
+        }
     }
     
     &__list {}
@@ -14,10 +19,17 @@
     &__item {
         padding-top: 24px;
         padding-bottom: 24px;
+
+        @include tablet{
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
     }
 
     &__item:first-child{
-        padding-top: 20px;
+        @media screen and (max-width: 767px){
+            padding-top: 20px;
+        }
     }
 
     &__item:not(:last-child){
@@ -27,12 +39,26 @@
     &__address {
         font-style: normal;
         @include font (500, 12px, 1.83, 0.04em);
+
+        @include tablet{
+            font-size: 14px;
+            line-height: 1.86;
+        }
+
+        @include desktop{
+            font-size: 16px;
+            line-height: 1.81;
+        }
     }
     
     &__address-title {
         margin-bottom: 8px;
         
         color: var(--secondary-text-color);
+
+        @media screen and (min-width: 768px) and (max-width: 1199px){
+            margin-bottom: 12px;
+        }
     }
     
     &__address-text {        
@@ -45,10 +71,24 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 1.83;
+
+        @include tablet{
+            font-size: 14px;
+            line-height: 1.86;
+        }
+
+        @include desktop{
+            font-size: 16px;
+            line-height: 1.88;
+        }
     }
 
     &__working-hrs:first-child{
         margin-bottom: 8px;
+
+        @include desktop{
+            margin-bottom: 12px;
+        }
     }
     
     &__hrs-property {
@@ -68,10 +108,23 @@
         transition: color var(--transition);
         
         color: var(--secondary-text-color);
+
+        @include tablet{
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @include desktop{
+            font-style: 16px;
+        }
     }
 
     &__link:first-child{
         margin-bottom: 6px;
+
+        @include tablet{
+            margin-bottom: 4px;
+        }
     }
 
     &__link:hover,
