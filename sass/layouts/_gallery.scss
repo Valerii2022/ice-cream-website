@@ -4,12 +4,12 @@
    height: 98px;
 
    @include tablet {
-      height: 183px;
+      height: 28px;
    }
 
-   @include desktop {
-      height: 324px;
-   }
+   // @include desktop {
+   //    height: 324px;
+   // }
 
    &__img-thumb {
       position: relative;
@@ -30,13 +30,13 @@
       }
 
       @include tablet {
-         top: -144%;
+         top: -144px;
          width: 704px;
          height: 327px;
       }
 
       @include desktop {
-         top: -98%;
+         top: -98px;
          width: 1013px;
          height: 422px;
       }

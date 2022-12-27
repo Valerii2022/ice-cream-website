@@ -2380,12 +2380,7 @@ body.no-scroll {
 }
 @media screen and (min-width: 768px) {
   .gallery {
-    height: 183px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .gallery {
-    height: 324px;
+    height: 28px;
   }
 }
 .gallery__img-thumb {
@@ -2414,14 +2409,14 @@ body.no-scroll {
 }
 @media screen and (min-width: 768px) {
   .gallery__img-thumb {
-    top: -144%;
+    top: -144px;
     width: 704px;
     height: 327px;
   }
 }
 @media screen and (min-width: 1200px) {
   .gallery__img-thumb {
-    top: -98%;
+    top: -98px;
     width: 1013px;
     height: 422px;
   }
@@ -2675,6 +2670,8 @@ body.no-scroll {
 }
 .review {
   height: 1070px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media screen and (max-width: 767px) {
   .review {
