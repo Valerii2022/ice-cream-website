@@ -1,19 +1,54 @@
 .gallery {
    position: relative;
    background-color: var(--primary-text-color);
-   height: 106px;
+   height: 98px;
 
-   &__img {
-      display: block;
+   @include tablet {
+      height: 183px;
+   }
+
+   @include desktop {
+      height: 324px;
+   }
+
+   &__img-thumb {
+      position: relative;
+      width: 280px;
+      height: 130px;
       margin-left: auto;
       margin-right: auto;
       position: absolute;
       border-radius: 18px;
-      top: -36px;
       left: 50%;
-      // transform: translateX(-50%);
-      opacity: 1;
-      // overflow: hidden;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      background-color: var(--white-color);
+
+      @media screen and (max-width: 767px) {
+         top: -36px;
+      }
+
+      @include tablet {
+         top: -144%;
+         width: 704px;
+         height: 327px;
+      }
+
+      @include desktop {
+         top: -98%;
+         width: 1013px;
+         height: 422px;
+      }
+   }
+
+   &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      overflow: hidden;
+      border-radius: 18px;
 
       @media screen and (max-width: 767px) {
          width: 280px;
@@ -23,41 +58,134 @@
       @include tablet {
          width: 704px;
          height: 327px;
-         top: -144%;
       }
 
       @include desktop {
          width: 1013px;
          height: 422px;
-         top: -98%;
       }
    }
 }
 
 .active {
-   transform: translateX(-50%);
-   // animation: slider 2000ms linear 0ms infinite direction alternate none;
+   animation: slider-active 15000ms linear infinite normal 0ms none;
+
+   &:hover {
+      animation-play-state: paused;
+   }
 }
 
-// .active:hover {
-//    animation: slider 2s linear 0ms infinite direction alternate none;
-// }
-
 .hide-left {
-   transform: translateX(-155%);
-   // animation: slider 2000ms linear 2000ms infinite direction alternate none;
+   animation: slider-left 15000ms linear infinite normal 0ms none;
+
+   &:hover {
+      animation-play-state: paused;
+   }
 }
 
 .hide-right {
-   transform: translateX(55%);
-   // animation: slider 2000ms linear 4000ms infinite direction alternate none;
+   animation: slider-right 15000ms linear infinite normal 0ms none;
+
+   &:hover {
+      animation-play-state: paused;
+   }
 }
 
-// @keyframes slider {
-//    0% {
-//       border-radius: 0%;
-//    }
-//    100% {
-//       border-radius: 50%;
-//    }
-// }
+@keyframes slider-active {
+   0% {
+      opacity: 1;
+   }
+   11% {
+      opacity: 1;
+   }
+   22% {
+      opacity: 1;
+   }
+   33% {
+      opacity: 0;
+   }
+   44% {
+      opacity: 0;
+   }
+   55% {
+      opacity: 0;
+   }
+   66% {
+      opacity: 0;
+   }
+   77% {
+      opacity: 0;
+   }
+   88% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes slider-left {
+   0% {
+      opacity: 0;
+   }
+   11% {
+      opacity: 0;
+   }
+   22% {
+      opacity: 0;
+   }
+   33% {
+      opacity: 1;
+   }
+   44% {
+      opacity: 1;
+   }
+   55% {
+      opacity: 1;
+   }
+   66% {
+      opacity: 0;
+   }
+   77% {
+      opacity: 0;
+   }
+   88% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes slider-right {
+   0% {
+      opacity: 0;
+   }
+   11% {
+      opacity: 0;
+   }
+   22% {
+      opacity: 0;
+   }
+   33% {
+      opacity: 0;
+   }
+   44% {
+      opacity: 0;
+   }
+   55% {
+      opacity: 0;
+   }
+   66% {
+      opacity: 1;
+   }
+   77% {
+      opacity: 1;
+   }
+   88% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
