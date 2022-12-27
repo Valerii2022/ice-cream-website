@@ -1,4 +1,5 @@
 .button {
+   transition: color var(--transition), background-color var(--transition);
    padding-top: 12px;
    padding-bottom: 12px;
    padding-left: 34px;
@@ -34,6 +35,7 @@
 }
 
 .btn-arrow {
+   transition: color var(--transition), background-color var(--transition);
    padding-top: 12px;
    padding-bottom: 12px;
    padding-left: 34px;
@@ -81,7 +83,55 @@
    }
 }
 
+.btn-transparent-arrow {
+   transition: color var(--transition), border-color var(--transition);
+   padding-top: 10px;
+   padding-bottom: 10px;
+   border-radius: 10px;
+   border: 2px solid var(--btn-color);
+   outline: none;
+   cursor: inherit;
+
+   @include font(600, 14px, 1.21, null);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   color: var(--secondary-text-color);
+   background: transparent;
+
+   @include desktop {}
+
+   &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid var(--secondary-text-color);
+      border-right: 2px solid var(--secondary-text-color);
+      transform: rotate(-45deg);
+      margin-left: 12px;
+   }
+
+   &:hover {
+      border: 2px solid var(--btn-hover-color);
+   }
+
+   &:focus {
+      border: 2px solid var(--btn-hover-color);
+      color: var(--primary-text-color);
+   }
+
+   &:focus::after {
+      border-color: var(--primary-text-color);
+   }
+
+   &:disabled {
+      border: 2px solid var(--btn-disabled-color);
+   }
+}
+
 .transparent-btn {
+   transition: color var(--transition), border-color var(--transition);
    padding-top: 5px;
    padding-bottom: 5px;
    padding-left: 11px;
@@ -120,7 +170,9 @@
    }
 }
 
+
 .link {
+   transition: color var(--transition);
    outline: none;
 
    font-weight: 600;

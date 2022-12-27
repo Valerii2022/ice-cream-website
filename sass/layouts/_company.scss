@@ -1,0 +1,81 @@
+.company {
+    &__title {
+        display: inline-block;
+        padding: 4px 22px;
+        @include font (500, 12px, 1.17, 0.04em);
+        
+        color: var(--secondary-text-color);
+        background: var(--btn-color);
+        border-radius: 4px;
+    }
+    
+    &__list {}
+    
+    &__item {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    &__item:first-child{
+        padding-top: 20px;
+    }
+
+    &__item:not(:last-child){
+        border-bottom: 1px solid #E1E1E1;
+    }
+    
+    &__address {
+        font-style: normal;
+        @include font (500, 12px, 1.83, 0.04em);
+    }
+    
+    &__address-title {
+        margin-bottom: 8px;
+        
+        color: var(--secondary-text-color);
+    }
+    
+    &__address-text {        
+        color: #D6936D;
+    }
+    
+    &__hours-list {}
+    
+    &__working-hrs {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.83;
+    }
+
+    &__working-hrs:first-child{
+        margin-bottom: 8px;
+    }
+    
+    &__hrs-property {
+        color: var(--secondary-text-color);
+    }
+    
+    &__hrs-value {
+        color: #ABABAB;
+    }
+    
+    &__link {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.58;
+        cursor: inherit;
+        outline: none;
+        transition: color var(--transition);
+        
+        color: var(--secondary-text-color);
+    }
+
+    &__link:first-child{
+        margin-bottom: 6px;
+    }
+
+    &__link:hover,
+    &__link:focus{
+        color: var(--btn-color);
+    }
+}
