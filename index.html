@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <title>Ice cream</title>
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick-theme.css">
   </head>
   <body>
     <!-- header -->
@@ -251,8 +253,8 @@
       <!-- section customer review -->
       <section class="review">
         <div class="container">
-          <ul class="review__list">
-            <li class="review__item">
+          <div class="slider">
+            <div class="slide__item">
               <picture>
                 <source srcset="./images/emily.png 1x, ./images/emily@2x.png 2x" />
                 <img
@@ -268,8 +270,8 @@
                 In addition, you have beautiful serving, cozy atmosphere and polite staff.
               </p>
               <p class="review__clients-name">Emily, Los Angeles</p>
-            </li>
-            <li class="review__item">
+            </div>
+            <div class="slide__item">
               <picture>
                 <source srcset="./images/diana.png 1x, ./images/diana@2x.png 2x" />
                 <img
@@ -285,8 +287,8 @@
                 the excellent service - always served politely and quickly!
               </p>
               <p class="review__clients-name">Diana, Chicago</p>
-            </li>
-            <li class="review__item">
+            </div>
+            <div class="slide__item">
               <picture>
                 <source srcset="./images/sam.png 1x, ./images/sam@2x.png 2x" />
                 <img
@@ -302,8 +304,8 @@
                 cream and casual atmosphere!
               </p>
               <p class="review__clients-name">Bryan, New-York</p>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
       <!-- section contacts -->
@@ -774,6 +776,8 @@
         >
       </div>
     </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- scripts -->
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
@@ -782,5 +786,7 @@
     <script src="./js/read-more.js"></script>
     <script src="./js/locations.js"></script>
     <script src="./js/franchise.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="./js/_slider.js"></script>
   </body>
 </html>
